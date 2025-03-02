@@ -37,10 +37,8 @@ graph TD;
         StoreAPI["🏪 Store API Connector"]
     end
 
-    User["🛒 Shopper"] -->|Uses| WebApp
-    User -->|Uses| MobileApp
+    User["🛒 Shopper"] -->|Uses| MobileApp
 
-    WebApp -->|Requests Data| API
     MobileApp -->|Requests Data| API
 
     API -->|Fetches & Stores| Database
@@ -129,7 +127,7 @@ graph TD;
         DataUploader["📤 Data Uploader"]
     end
 
-    % Connections
+ 
     User["🛒 Shopper"] -->|Uses| UI
     User -->|Uses| UI_Mobile
 
@@ -195,9 +193,8 @@ graph TD;
         ManualEntry["✍️ Manual Data Entry"]
     end
 
-    % Connections
-    User["🛒 Shopper"] -->|Uses| WebApp
-    User -->|Uses| MobileApp
+   
+    User["🛒 Shopper"] -->|Uses| MobileApp
 
     WebApp -->|Requests Data| API
     MobileApp -->|Requests Data| API
