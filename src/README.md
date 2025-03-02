@@ -11,6 +11,14 @@
 * **Daily Specials:** Highlight discounted items or promotions from stores.
 * **Notifications:** Send alerts for new deals or when prices drop for a user’s favorite items.
 
-#### Specifications: [SPECIFICATION.md](SPECIFICATION.md)
+Folder structure
 
-#### Architecture: [ARCHITECTURE.md](ARCHITECTURE.md)
+    ── src/
+        ── Architecture.md
+        ── main.rs
+        ── README.md
+        ── Specification.md
+
+#### Specifications: [Specification.md](Specification)
+
+#### Architecture: [Architecture.md](Architecture)
