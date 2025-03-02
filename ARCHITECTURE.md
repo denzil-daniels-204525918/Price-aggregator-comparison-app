@@ -96,7 +96,80 @@ graph TD;
         API_Gateway["🌍 API Gateway"]
         RequestHandler["🔄 Request Handler"]
         BusinessLogic["📊 Business Logic"]
-        Cache["⚡ C
+        Cache["⚡ Cache Layer"]
+    end
+
+    subgraph Aggregator Components
+        PriceFetcher["🔍 Price Fetcher"]
+        PriceAnalyzer["📊 Price Analyzer"]
+    end
+
+    subgraph Notification Components
+        EmailService["📧 Email Service"]
+        SMSService["📩 SMS Service"]
+        PushService["📲 Push Notifications"]
+    end
+
+    subgraph Authentication Components
+        AuthDB["🔑 User Database"]
+        TokenService["🔐 Token Service"]
+        OAuth["🔗 OAuth Provider"]
+    end
+
+    subgraph Scraper Components
+        HTMLParser["📄 HTML Parser"]
+        DataExtractor["📊 Data Extractor"]
+    end
+
+    subgraph Store API Components
+        APIConnector["🔗 API Connector"]
+        DataParser["📊 Data Parser"]
+    end
+
+    subgraph Manual Entry Components
+        InputValidator["✔️ Input Validator"]
+        DataUploader["📤 Data Uploader"]
+    end
+
+    % Connections
+    User["🛒 Shopper"] -->|Uses| UI
+    User -->|Uses| UI_Mobile
+
+    UI -->|Calls| Controller
+    Controller -->|Fetches Data| DataHandler
+    UI_Mobile -->|Calls| Controller_Mobile
+    Controller_Mobile -->|Fetches Data| DataHandler_Mobile
+
+    Controller -->|Requests| API_Gateway
+    Controller_Mobile -->|Requests| API_Gateway
+    API_Gateway -->|Routes Requests| RequestHandler
+    RequestHandler -->|Executes| BusinessLogic
+    BusinessLogic -->|Queries| Database
+    BusinessLogic -->|Caches Data| Cache
+
+    BusinessLogic -->|Requests Prices| PriceFetcher
+    PriceFetcher -->|Analyzes Data| PriceAnalyzer
+
+    BusinessLogic -->|Notifies Users| EmailService
+    BusinessLogic -->|Notifies Users| SMSService
+    BusinessLogic -->|Notifies Users| PushService
+
+    BusinessLogic -->|Authenticates| TokenService
+    TokenService -->|Verifies Users| AuthDB
+    TokenService -->|OAuth Login| OAuth
+
+    PriceFetcher -->|Scrapes| HTMLParser
+    HTMLParser -->|Extracts Data| DataExtractor
+
+    PriceFetcher -->|Calls API| APIConnector
+    APIConnector -->|Parses Data| DataParser
+
+    ManualEntry -->|Validates Input| InputValidator
+    InputValidator -->|Uploads Data| DataUploader
+    DataUploader -->|Stores in Database| Database
+
+    BusinessLogic -->|Logs Events| Logs
+
 ```
 **Level 4**
 ```mermaid
