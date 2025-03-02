@@ -14,11 +14,11 @@
 Folder structure
 
     ── src/
-        ── Architecture.md
         ── main.rs
-        ── README.md
-        ── Specification.md
+    ── Architecture.md
+    ── README.md
+    ── Specification.md
 
-#### Specifications: [Specification.md](Specification)
+#### Specifications: [Specification.md](Specification.md)
 
-#### Architecture: [Architecture.md](Architecture)
+#### Architecture: [Architecture.md](Architecture.md)
