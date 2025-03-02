@@ -13,8 +13,6 @@
 
 Folder structure
 
-    ── src/
-        ── main.rs
     ── Architecture.md
     ── README.md
     ── Specification.md
