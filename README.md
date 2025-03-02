@@ -1,6 +1,6 @@
-# Welcome to ShopSmart
+# Price aggregator comparison app
 
-### ShopSmart the preferred pricing app that aggregates and compares pricing and specials from major grocery stores, helping users find the best deals on food and beverages.
+### A pricing aggregator and comparison application that aims to consolidate information from major grocery stores, allowing users find the best deals on food and beverages in a central location.
 
 ## Key Features	
 

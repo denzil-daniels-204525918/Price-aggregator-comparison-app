@@ -1,8 +1,8 @@
-# Project Title: Price aggregator comparison app
-### ShopSmart the preferred pricing app that aggregates and compares pricing and specials from major grocery stores, helping users find the best deals on food and beverages.
+# Price aggregator comparison app
 
+### A pricing aggregator and comparison application that aims to consolidate information from major grocery stores, allowing users find the best deals on food and beverages in a central location.
 **Domain: Grocery stores**<br/>
-&nbsp;This project focuses on grocery stores, specifically analysing food prices between shops. 
+This project focuses on grocery stores, specifically analysing food prices between shops. 
 The purpose is to provide a tool that compares grocery prices to find the most affordable options. By collecting price data from various stores, the project aims to help individuals save money on essential goods.
 
 **Problem Statement:** <br/>
@@ -24,3 +24,8 @@ The project is feasible as there is a clear demand for a system that enables con
 #### **References**
 
 Abdul-Aziz, I. & Alagidede, I. P., 2020. Monetary policy and food inflation in South Africa: A quantile regression analysis. Food Policy, 91 , art. no. 101816 ed. s.l.:Elsevier.
+
+**Resources**
+* C4 Model Guide
+* Mermaid Guide and Tutorial for System design Components
+* Chat GPT
