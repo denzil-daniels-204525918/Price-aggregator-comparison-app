@@ -1,4 +1,5 @@
-# Grocery Price Comparison - C4 Context Diagram (Level 1)
+# Grocery Price Comparison 
+**C4 Context Diagram (Level 1)**
 
 ```mermaid
 graph TD;
