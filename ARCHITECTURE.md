@@ -5,7 +5,7 @@
 * **Component (Level 3)** – Internal structure of each container.
 * **Code (Level 4)** – Low-level details.
 
-**Level 1**
+### **Level 1**
 ```mermaid
 graph TD;
     User["🛒 Shopper\n(End User)"] -->|Uses| System["Grocery Price Comparison Platform"]
@@ -14,7 +14,7 @@ graph TD;
     System -->|Displays Prices & Promotions| User
 ```
 
-**Level 2**
+### **Level 2**
 ```mermaid
 graph TD;
     subgraph User Interface
@@ -51,7 +51,7 @@ graph TD;
     Scraper -->|Scrapes Websites| Database
     StoreAPI -->|Fetches Store Prices| Database
 ```
-**Level 3**
+### **Level 3**
 ```mermaid
 graph TD;
     subgraph User Interface
@@ -168,7 +168,7 @@ graph TD;
 
 ```
 
-**Level 4**
+### **Level 4**
 ```mermaid
 graph TD;
     subgraph User Interface
