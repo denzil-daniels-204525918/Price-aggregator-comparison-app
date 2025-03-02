@@ -76,11 +76,6 @@ graph TD;
         ManualEntry["✍️ Manual Data Entry"]
     end
 
-    subgraph Web App Components
-        UI["🖥️ UI Layer"]
-        Controller["🔄 Controller"]
-        DataHandler["💾 Data Handler"]
-    end
 
     subgraph Mobile App Components
         UI_Mobile["📱 UI Layer"]
