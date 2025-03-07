@@ -12,3 +12,4 @@
     row "Logistics & Delivery Partners", "Provide delivery services for partner stores", "Integration with store inventory, Delivery time accuracy, Fair commission rates", "Late deliveries impacting user experience, Unclear commission structures", "High fulfillment rate, Improved delivery efficiency"
     row "Payment Service Providers", "Process secure transactions (if payments are integrated)", "Fraud prevention, Fast & secure transactions, User trust in payments", "Chargebacks & fraud risks, Integration complexities with different banks", "High payment success rate, Secure transaction records"
     row "Customer Support Team", "Assist users with issues related to the platform", "Efficient ticket resolution, Clear issue escalation, Maintaining a positive user experience", "High ticket volume, Slow response times, User frustration due to unresolved issues", "High customer satisfaction ratings, Reduced complaint rates"
+```
