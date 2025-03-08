@@ -1,8 +1,11 @@
+## 📌 Stakeholder Analysis Overview
+This document identifies key stakeholders, outlining their roles, concerns, pain points, and success metrics. As the foundation for system alignment, it ensures that both business and user needs are met.
+
 ## 📌 Stakeholder Analysis
 
 ---
-| **Stakeholder**                     | **Role**                                                       | **Key Concerns**                                                                                                         | **Pain Points**                                                                             | **Success Metrics**                                        |
-|-------------------------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------|
+| **Stakeholder**                     | **Role**        | **Key Concerns**   | **Pain Points**        | **Success Metrics** |
+|-------------------------------------|-----------------|--------------------|------------------------|-------------------------|
 | **Shoppers**                        | People who use the application to compare prices to save money | - Price accuracy & real-time updates <br> - Easy search and navigation <br> - Mobile-friendly UI                         | - Outdated prices <br> - Limited store coverage <br> - Poor user experience                 | - High user engagement <br> - Increased cost savings <br> - Positive reviews |
 | **Data Providers (APIs / Web Scrapers)** | Supply periodic price updates                                  | - Data reliability & freshness <br> - Compliance with store policies <br> - API uptime                                   | - Blocked access due to scraping <br> - Inconsistent data sources                           | - High data accuracy <br> - Reliable API connections |
 | **Developers & IT Team**            | Build, maintain, and update the system                         | - System scalability <br> - Data integration challenges <br> - Cybersecurity risks <br> - Backup servers and maintenance | - Managing high traffic <br> - Changing store APIs <br> - Legal issues with data collection | - System uptime & performance <br> - Secure data transactions |
