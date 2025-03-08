@@ -16,6 +16,7 @@ Folder structure
 
     ── Architecture.md
     ── README.md
+    ── Reflection.md
     ── Specification.md
     ── SRD.md
     ── Stakeholder Analysis
@@ -26,3 +27,4 @@ Folder structure
 * #### Architecture: [Architecture.md](Architecture.md)
 * #### System Requirements Document (SRD): [SRD.md](SRD.md)
 * #### Stakeholder Analysis: [Stakeholder Analysis.md](Stakeholder%20Analysis.md)
+* #### Reflection: [Reflection.md](Reflection.md)
