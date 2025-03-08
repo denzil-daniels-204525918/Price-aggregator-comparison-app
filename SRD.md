@@ -1,37 +1,28 @@
 ## 📌 Functional Requirements
 
 ---        
-|                     | **Requirement**             | **Acceptance Criteria** |
-|---------------------|-----------------------------|-------------------------|
-| **Usability**       | **Search Functionality**    | ✅ Users can search for specific grocery items by name or category. <br> ✅ Search results return relevant products within **2 seconds**. |
-|                     | **Comparison Engine**       | ✅ Users can see a side-by-side price comparison across multiple retailers. <br> ✅ The cheapest option is highlighted for easy selection. |
-|                     | **Filter Options**          | ✅ Users can filter results by **price, location, retailer, brand, or promotions**. <br> ✅ Filters apply instantly without page reloads. |
-|                     | **Geolocation Integration** | ✅ Users can view deals available **near their location** or within a **custom radius**. <br> ✅ Location-based filtering updates automatically when the user moves. |
-|                     | **Notifications**           | ✅ Users receive **push/email notifications** when prices drop on saved items. <br> ✅ Users can enable or disable notifications in settings. |
-|                     | **Save or Share Feature**   | ✅ Users can **save their shopping lists** within the app. <br> ✅ Users can **share price comparisons** via WhatsApp, SMS, or social media. |
-| &nbsp;              |                             |                         |
-| **Deployability**   | **Platform Compatibility**  | ✅ The system should be deployable on **Windows, Linux**, and major cloud services (AWS, Azure). <br> ✅ The system supports deployment on modern web servers. |
-|                     |                             |                         |
+|                     | **Requirement**              | **Acceptance Criteria** |
+|---------------------|------------------------------|-------------------------|
+| **Usability**       | **Search Functionality**     | ✅ Users can search for specific grocery items by name or category. <br> ✅ Search results return relevant products within **2 seconds**. |
+|                     | **Comparison Engine**        | ✅ Users can see a side-by-side price comparison across multiple retailers. <br> ✅ The cheapest option is highlighted for easy selection. |
+|                     | **Filter Options**           | ✅ Users can filter results by **price, location, retailer, brand, or promotions**. <br> ✅ Filters apply instantly without page reloads. |
+|                     | **Geolocation Integration**  | ✅ Users can view deals available **near their location** or within a **custom radius**. <br> ✅ Location-based filtering updates automatically when the user moves. |
+|                     | **Notifications**            | ✅ Users receive **push/email notifications** when prices drop on saved items. <br> ✅ Users can enable or disable notifications in settings. |
+|                     | **Save or Share Feature**    | ✅ Users can **save their shopping lists** within the app. <br> ✅ Users can **share price comparisons** via WhatsApp, SMS, or social media. |
+| &nbsp;              |                              |                         |
+| **Deployability**   | **Platform Compatibility**   | ✅ The system should be deployable on **Windows, Linux**, and major cloud services (AWS, Azure). <br> ✅ The system supports deployment on modern web servers. |
+| &nbsp;              |                              |                         |
 | **Maintainability** | **Documentation**            | ✅ The documentation shall include an **API guide** for future integrations. <br> ✅ Clear setup instructions for developers and system administrators. |
 |                     | **Modular Codebase**         | ✅ Codebase should be **modular** for easy future upgrades. <br> ✅ Each module must have unit tests and clear comments. |
-
-### **Scalability**
-|                     | **Requirement**              | **Acceptance Criteria** |
-|------------------------------|-------------------------|
-|                     | **System Scalability**        | ✅ The system can handle **1,000 concurrent users** during peak hours. <br> ✅ The database is capable of scaling to handle high traffic. |
-|                     | **Store Coverage Expansion**  | ✅ New stores can be integrated within **14 business days** without major system changes. <br> ✅ The system scales efficiently as new stores are added. |
-
-### **Security**
-| **Requirement**              | **Acceptance Criteria** |
-|------------------------------|-------------------------|
-|                     | **Data Security**             | ✅ All user data shall be encrypted using **AES-256** encryption both **in transit and at rest**. <br> ✅ User passwords are stored securely using **bcrypt** hashing. |
+| &nbsp;              |                              |                         |
+| **Scalability**     | **System Scalability**       | ✅ The system can handle **1,000 concurrent users** during peak hours. <br> ✅ The database is capable of scaling to handle high traffic. |
+|                     | **Store Coverage Expansion** | ✅ New stores can be integrated within **14 business days** without major system changes. <br> ✅ The system scales efficiently as new stores are added. |
+| &nbsp;              |                              |                         |
+| **Security**        | **Data Security**          | ✅ All user data shall be encrypted using **AES-256** encryption both **in transit and at rest**. <br> ✅ User passwords are stored securely using **bcrypt** hashing. |
 |                     | **User Authentication**      | ✅ Users will authenticate via email/password or OAuth (Google, Facebook). <br> ✅ The system shall implement **multi-factor authentication (MFA)**. |
-
-### **Performance**
-| **Requirement**              | **Acceptance Criteria** |
-|------------------------------|-------------------------|
-|                     | **Search Performance**        | ✅ Search results shall load within **2 seconds** for any query. <br> ✅ The system shall handle search requests efficiently under high load. |
-|                     | **Real-Time Price Updates**   | ✅ The system fetches price data via APIs or web scraping at regular intervals. <br> ✅ Data accuracy is maintained above **95%** with minimal latency. |
+| &nbsp;              |                              |                         |
+| **Performance**     | **Search Performance**       | ✅ Search results shall load within **2 seconds** for any query. <br> ✅ The system shall handle search requests efficiently under high load. |
+|                     | **Real-Time Price Updates**  | ✅ The system fetches price data via APIs or web scraping at regular intervals. <br> ✅ Data accuracy is maintained above **95%** with minimal latency. |
 
 ---
 
