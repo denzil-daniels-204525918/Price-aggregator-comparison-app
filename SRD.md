@@ -77,7 +77,7 @@
 | **Access Control**           | ✅ Users shall only have access to data they are authorized to view. <br> ✅ Role-based access control (RBAC) shall be implemented. |
 | **Session Management**       | ✅ Sessions shall expire after **30 minutes of inactivity**. <br> ✅ Users shall be logged out after multiple failed login attempts, requiring additional authentication steps (e.g., CAPTCHA). |
 
-|<td colspan=2>### **Performance**</td>|
+| <td colspan=2>### **Performance**</td>              |
 | **Requirement**              | **Acceptance Criteria** |
 |------------------------------|-------------------------|
 | **Response Time**            | ✅ The system shall respond to user requests (e.g., searches, comparisons) within **2 seconds**. <br> ✅ High traffic periods shall not result in degraded user experience. |
