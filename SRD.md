@@ -10,7 +10,7 @@
 | **Geolocation Integration** | ✅ Users can view deals available **near their location** or within a **custom radius**. <br> ✅ Location-based filtering updates automatically when the user moves. |
 | **Notifications**          | ✅ Users receive **push/email notifications** when prices drop on saved items. <br> ✅ Users can enable or disable notifications in settings. |
 | **Save or Share Feature**  | ✅ Users can **save their shopping lists** within the app. <br> ✅ Users can **share price comparisons** via WhatsApp, SMS, or social media. |
-| <td colspan=2>spans two cols</td> |
+| <span colspan=2>spans two cols</span> |
 | col 1 | col 2 |
 |/3. spans 3 rows | row a |
 | row b |
