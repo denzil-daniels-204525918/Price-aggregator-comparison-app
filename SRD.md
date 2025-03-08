@@ -2,19 +2,14 @@
 
 ---
 ### **Usability**           
-| **Requirement**            | **Acceptance Criteria** |
-|----------------------------|-------------------------|
-| **Search Functionality**      | ✅ Users can search for specific grocery items by name or category. <br> ✅ Search results return relevant products within **2 seconds**. |
-| **Comparison Engine**      | ✅ Users can see a side-by-side price comparison across multiple retailers. <br> ✅ The cheapest option is highlighted for easy selection. |
-| **Filter Options**         | ✅ Users can filter results by **price, location, retailer, brand, or promotions**. <br> ✅ Filters apply instantly without page reloads. |
-| **Geolocation Integration** | ✅ Users can view deals available **near their location** or within a **custom radius**. <br> ✅ Location-based filtering updates automatically when the user moves. |
-| **Notifications**          | ✅ Users receive **push/email notifications** when prices drop on saved items. <br> ✅ Users can enable or disable notifications in settings. |
-| **Save or Share Feature**  | ✅ Users can **save their shopping lists** within the app. <br> ✅ Users can **share price comparisons** via WhatsApp, SMS, or social media. |
-| <span colspan=2>spans two cols</span> |
-| col 1 | col 2 |
-|/3. spans 3 rows | row a |
-| row b |
-| row c |
+|                     | **Requirement**             | **Acceptance Criteria** |
+|---------------------|-----------------------------|-------------------------|
+| **Usability**       | **Search Functionality**    | ✅ Users can search for specific grocery items by name or category. <br> ✅ Search results return relevant products within **2 seconds**. |
+|                     | **Comparison Engine**       | ✅ Users can see a side-by-side price comparison across multiple retailers. <br> ✅ The cheapest option is highlighted for easy selection. |
+|                     | **Filter Options**          | ✅ Users can filter results by **price, location, retailer, brand, or promotions**. <br> ✅ Filters apply instantly without page reloads. |
+|                     | **Geolocation Integration** | ✅ Users can view deals available **near their location** or within a **custom radius**. <br> ✅ Location-based filtering updates automatically when the user moves. |
+|                     | **Notifications**           | ✅ Users receive **push/email notifications** when prices drop on saved items. <br> ✅ Users can enable or disable notifications in settings. |
+|                     | **Save or Share Feature**   | ✅ Users can **save their shopping lists** within the app. <br> ✅ Users can **share price comparisons** via WhatsApp, SMS, or social media. |
 
 ### **Deployability**
 | **Requirement**              | **Acceptance Criteria** |
