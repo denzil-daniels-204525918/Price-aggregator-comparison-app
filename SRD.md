@@ -9,14 +9,11 @@
 |                     | **Geolocation Integration** | ✅ Users can view deals available **near their location** or within a **custom radius**. <br> ✅ Location-based filtering updates automatically when the user moves. |
 |                     | **Notifications**           | ✅ Users receive **push/email notifications** when prices drop on saved items. <br> ✅ Users can enable or disable notifications in settings. |
 |                     | **Save or Share Feature**   | ✅ Users can **save their shopping lists** within the app. <br> ✅ Users can **share price comparisons** via WhatsApp, SMS, or social media. |
-
-
-|                     | **Requirement**             | **Acceptance Criteria** |
 |---------------------|-----------------------------|-------------------------|
-| **Deployability**   | **Platform Compatibility**   | ✅ The system should be deployable on **Windows, Linux**, and major cloud services (AWS, Azure). <br> ✅ The system supports deployment on modern web servers. |
+| **Deployability**   | **Platform Compatibility**  | ✅ The system should be deployable on **Windows, Linux**, and major cloud services (AWS, Azure). <br> ✅ The system supports deployment on modern web servers. |
 
 |                     | **Requirement**              | **Acceptance Criteria** |
-|------------------------------|-------------------------|
+|------------------------------|-------------------------|-------------------------|
 | **Maintainability** | **Documentation**            | ✅ The documentation shall include an **API guide** for future integrations. <br> ✅ Clear setup instructions for developers and system administrators. |
 |                     | **Modular Codebase**         | ✅ Codebase should be **modular** for easy future upgrades. <br> ✅ Each module must have unit tests and clear comments. |
 
