@@ -2,5 +2,14 @@
 
 Challenges faced in balancing stakeholder needs
 
-The user wants a seemless interaction and ease of access to information, the system needs to support the data processing and infrastructure.
-Solution: Opt in option for exclusive deals while using a incremental approach to feature development
+The user wants a seemless interaction and ease of access to information, while the system needs to support the data processing and the infrastructure.
+Solution: Opt-in option for exclusive deals while using a structured development approach (Minimum Viable Product) for development.
+
+Integrating data from multiple sources along with the implementation of strong security measures can hamper scalibility and consistency while reducing the useability.
+Solution: Use APIs and supplementing with other methods where necessary, coupled with optimal login for enhanced features.
+
+The system would want to grow the number of users and data without degradation.
+Solution: Effecient database indexing and caching mechanisms.
+
+Compliance with variouse data sharing policies from retailers and data protection laws.
+Solution: adherence to legal frameworks and offer retailers data-sharing agreements.
