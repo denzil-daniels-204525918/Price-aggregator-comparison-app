@@ -1,5 +1,12 @@
 ## 📌 Functional Requirements
+|\2. spans two cols |
+| col 1 | col 2 |
 
+A forward slash / is used for a row span.
+
+|/3. spans 3 rows | row a |
+| row b |
+| row c |
 ---
 ### **Usability**           
 | **Requirement**            | **Acceptance Criteria** |
@@ -77,7 +84,7 @@
 | **Access Control**           | ✅ Users shall only have access to data they are authorized to view. <br> ✅ Role-based access control (RBAC) shall be implemented. |
 | **Session Management**       | ✅ Sessions shall expire after **30 minutes of inactivity**. <br> ✅ Users shall be logged out after multiple failed login attempts, requiring additional authentication steps (e.g., CAPTCHA). |
 
-| **Performance** ||
+### **Performance** 
 | **Requirement**              | **Acceptance Criteria** |
 |------------------------------|-------------------------|
 | **Response Time**            | ✅ The system shall respond to user requests (e.g., searches, comparisons) within **2 seconds**. <br> ✅ High traffic periods shall not result in degraded user experience. |
