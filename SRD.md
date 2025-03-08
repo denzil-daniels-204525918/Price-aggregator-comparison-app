@@ -9,6 +9,7 @@
 |                     | **Geolocation Integration** | ✅ Users can view deals available **near their location** or within a **custom radius**. <br> ✅ Location-based filtering updates automatically when the user moves. |
 |                     | **Notifications**           | ✅ Users receive **push/email notifications** when prices drop on saved items. <br> ✅ Users can enable or disable notifications in settings. |
 |                     | **Save or Share Feature**   | ✅ Users can **save their shopping lists** within the app. <br> ✅ Users can **share price comparisons** via WhatsApp, SMS, or social media. |
+
 |---------------------|-----------------------------|-------------------------|
 | **Deployability**   | **Platform Compatibility**  | ✅ The system should be deployable on **Windows, Linux**, and major cloud services (AWS, Azure). <br> ✅ The system supports deployment on modern web servers. |
 
