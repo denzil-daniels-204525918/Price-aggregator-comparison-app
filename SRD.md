@@ -1,3 +1,8 @@
+## 📌 System Requirements Document (SRD) Overview
+This document categorizes functional and non-functional requirements, aligning them with key quality attributes to ensure a well-structured system design. As the foundation for the system, it ensures that both business objectives and user expectations are met. The requirements cover essential functionalities such as search, filtering, price comparison, notifications, and geolocation-based deals, while also addressing critical aspects like deployability, security, scalability, and maintainability. Additionally, the document highlights challenges in balancing stakeholder needs and presents structured tables for clear requirement analysis.
+
+Also view:  
+
 ## 📌 Functional Requirements
 
 ---    
