@@ -1,8 +1,9 @@
 ## 📌 System Requirements Document (SRD) Overview
 This document categorizes functional and non-functional requirements, aligning them with key quality attributes to ensure a well-structured system design. As the foundation for the system, it ensures that both business objectives and user expectations are met. 
 * **Functional Requirements:** Defines the core features and functionality of the system. Focus on capabilities that directly address stakeholder concerns. Includes acceptance criteria for critical requirements. <br/>
-* **Non-Functional Requirements:** Address the overall system usability, deployability, maintenance, scalability, security and performance. 
-Also view: * #### Stakeholder Analysis: [Stakeholder Analysis.md](Stakeholder Analysis.md) 
+* **Non-Functional Requirements:** Address the overall system usability, deployability, maintenance, scalability, security and performance. <br/><br/>
+
+Also view: #### Stakeholder Analysis: [Stakeholder Analysis.md](Stakeholder Analysis.md) 
 
 ## 📌 Functional Requirements
 
