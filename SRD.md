@@ -1,6 +1,7 @@
 ## 📌 Functional Requirements
 
----        
+---    
+
 |                     | **Requirement**              | **Acceptance Criteria** |
 |---------------------|------------------------------|-------------------------|
 | **Usability**       | **Search Functionality**     | ✅ Users can search for specific grocery items by name or category. <br> ✅ Search results return relevant products within **2 seconds**. |
@@ -23,18 +24,17 @@
 | &nbsp;              |                              |                         |
 | **Performance**     | **Search Performance**       | ✅ Search results shall load within **2 seconds** for any query. <br> ✅ The system shall handle search requests efficiently under high load. |
 |                     | **Real-Time Price Updates**  | ✅ The system fetches price data via APIs or web scraping at regular intervals. <br> ✅ Data accuracy is maintained above **95%** with minimal latency. |
-
 ---
 
 ## 📌 Non-Functional Requirements
-
 ---
 
 ### **Usability**
 | **Requirement**              | **Acceptance Criteria**                                                                                                                                                                                                                                      |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **User Interface Design**    | ✅ The system shall have an intuitive, user-friendly interface with a how to secttion to educate users on how to use the app <br> ✅ The interface shall comply with **WCAG 2.1 accessibility standards** to ensure accessibility for users with disabilities. |
-| **Search Functionality**      | ✅ The search feature shall be easy to use and return relevant results quickly. <br> ✅ Search filters shall be simple to apply and clear in their purpose.                                                                                                    |
+| **Search Functionality**      | ✅ The search feature shall be easy to use and return relevant results quickly. <br> ✅ Search filters shall be simple to apply and clear in their purpose.|
+| &nbsp;              |                              |                         |
 
 ### **Deployability**
 | **Requirement**              | **Acceptance Criteria** |
