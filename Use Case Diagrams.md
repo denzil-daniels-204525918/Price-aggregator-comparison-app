@@ -43,8 +43,8 @@ graph TD;
   System --> D
 ```
 
-### 📌 Written Explanation
-# 1️⃣ Key Actors and Their Roles
+## 📌 Written Explanation
+### 1️⃣ Key Actors and Their Roles
 * User 🧑‍💻 → Searches for products, compares prices, receives alerts, and shares deals.
 * Retailer 🏪 → Manages inventory and promotes deals.
 * Admin 🛠️ → Configures system settings and oversees platform operations.
