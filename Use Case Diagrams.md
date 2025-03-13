@@ -42,3 +42,12 @@ graph TD;
   System --> C
   System --> D
 ```
+
+### 📌 Written Explanation
+# 1️⃣ Key Actors and Their Roles
+* User 🧑‍💻 → Searches for products, compares prices, receives alerts, and shares deals.
+* Retailer 🏪 → Manages inventory and promotes deals.
+* Admin 🛠️ → Configures system settings and oversees platform operations.
+* Data Provider 🔗 → Supplies pricing and product data via APIs or other sources.
+* Advertiser 📢 → Uses the platform to promote products and discounts.
+* System 🤖 → Processes requests, retrieves data, and handles notifications.
