@@ -1,4 +1,4 @@
-'''mermaid
+```mermaid
 graph TD;
   %% Define Actors
   User["🧑‍💻 User"] 
@@ -32,7 +32,7 @@ graph TD;
   Admin --> I
 
   DataProvider --> G
-
+```
   Advertiser --> H
 
   System --> A
