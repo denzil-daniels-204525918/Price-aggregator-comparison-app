@@ -18,6 +18,7 @@ graph TD;
   G["📡 Provide Data via API"]
   H["📈 Advertise Promotions"]
   I["🔧 Manage System Settings"]
+  J["⚙️ Oversee platform growth"]
 
   %% Relationships
   User --> A
@@ -30,6 +31,7 @@ graph TD;
   Retailer --> H
 
   Admin --> I
+  Admin --> J
 
   DataProvider --> G
 
