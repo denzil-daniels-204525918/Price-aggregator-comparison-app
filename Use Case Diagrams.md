@@ -27,9 +27,9 @@ graph TD;
   User --> D
   User --> E
 
-  Retailer --> F
   Retailer --> H
 
+  Admin --> F
   Admin --> I
   Admin --> J
 
