@@ -282,6 +282,7 @@ Example GitHub Actions workflow (ci-cd.yml):
 * Real-time notifications for price drops and special deals.
 * Admin tools for managing product listings, pricing, and monitoring system performance.
 
+
 ```mermaid
 graph TD;
     A[Start] --> B[Set up GitHub Repository]
