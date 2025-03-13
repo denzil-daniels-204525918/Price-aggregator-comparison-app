@@ -137,5 +137,147 @@ The objective of this Use Case Diagram is to visually represent the interactions
 | Monitoring & Logging | Prometheus / ELK Stack | Tracks system performance, logs errors, and ensures stability. |
 | Mobile Development | React Native / Flutter | Allows the system to be accessible via mobile devices. |
 
-# Steps to Set Up CI/CD for a Python Web Application: (link)
+##  Implementation Steps
+1️⃣ Set Up GitHub Repository for Your Project
+* Create a new GitHub repository to host your system code (e.g., for tracking grocery price comparison).
+* Initialize the repository with a README and .gitignore (if using Python, Node.js, etc.).
 
+2️⃣ Set Up Database & Backend Development.
+
+* Choose and set up a database system (e.g., PostgreSQL, MongoDB).
+* Design the database schema to handle entities like Users, Products, and Stores.
+
+  Example database setup for products:
+
+      CREATE TABLE Products (
+      id SERIAL PRIMARY KEY,
+      name VARCHAR(100),
+      price DECIMAL(10, 2),
+      store_id INTEGER,
+      category VARCHAR(50)
+      );
+
+* Develop the backend API to interact with this database:
+** GET /search: Fetch products based on user search query.
+** GET /compare: Compare prices across stores for a specific product.
+** POST /subscribe: Allow users to save product preferences and set up notifications.
+  
+  Example code for an API endpoint:
+
+      @app.route('/search', methods=['GET'])
+      def search():
+      query = request.args.get('query')
+      products = get_products_from_db(query)  # Implement your database call
+      return jsonify(products)
+  
+3️⃣ Set Up Web Scraping & API Integrations
+* Implement web scraping to collect product prices from different stores.
+* Use tools like Scrapy or BeautifulSoup to scrape websites for real-time pricing.
+  Example using BeautifulSoup in Python:
+
+      import requests
+      from bs4 import BeautifulSoup
+
+      def scrape_prices(store_url):
+      response = requests.get(store_url)
+      soup = BeautifulSoup(response.content, 'html.parser')
+      prices = soup.find_all('span', {'class': 'price'})
+      return prices
+* Integrate store APIs (if available) to get live pricing data.
+  
+4️⃣ Frontend Development (UI) <br />
+* Choose a frontend framework like React or Vue.js to create the user interface.
+* Implement key UI elements:
+** Search bar for users to enter product queries.
+** Comparison table to display prices from different stores.
+** Filters to allow sorting by price, store, and product category.
+
+Example React component for displaying search results:
+
+    const ProductList = ({ products }) => (
+    <div>
+    {products.map(product => (
+      <div key={product.id}>
+        <p>{product.name}</p>
+        <p>${product.price}</p>
+      </div>
+    ))}
+    </div>
+    );
+
+5️⃣ Implement Notification System
+* Set up email notifications using services like SendGrid or Amazon SES to alert users when prices drop or when new deals are available.
+* Implement push notifications for the app using services like Firebase Cloud Messaging (FCM).
+Example of sending a notification using Firebase:
+
+    const sendPushNotification = (userToken, message) => {
+    const payload = {
+    notification: {
+      title: 'Price Drop Alert!',
+      body: message,
+    },
+    };
+    admin.messaging().sendToDevice(userToken, payload);
+    };
+
+6️⃣ Testing & Quality Assurance
+* Set up unit tests for backend API endpoints and frontend components using tools like Jest or Mocha.
+* Run integration tests to ensure the frontend and backend work seamlessly together.
+* Conduct UI tests using tools like Cypress or Selenium.
+  Example Jest test for backend:
+
+      test('GET /search returns products', async () => {
+      const response = await request(app).get('/search?query=apple');
+      expect(response.status).toBe(200);
+      expect(response.body).toHaveProperty('products');
+      });
+
+7️⃣ Set Up Continuous Integration / Continuous Deployment (CI/CD)
+* Set up a CI/CD pipeline using GitHub Actions, Jenkins, or CircleCI to automate deployment.
+* Define jobs for:
+** Linting code to ensure coding standards.
+**Running tests to validate functionality.
+**Deploying the application to production (e.g., AWS, Heroku).
+  
+Example GitHub Actions workflow (ci-cd.yml):
+      
+    name: CI/CD Pipeline
+    on:
+      push:
+        branches:
+          - main
+      
+    jobs:
+      lint:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+          uses: actions/checkout@v2
+          - name: Set up Python
+          uses: actions/setup-python@v2
+          with:
+            python-version: '3.x'
+          - name: Install dependencies
+            run: |
+              python -m pip install --upgrade pip
+              pip install -r requirements.txt
+          - name: Run linting
+          run: |
+            pip install flake8
+            flake8 .
+
+
+8️⃣ Deployment & Monitoring
+* Deploy your backend (e.g., Flask, Django, Node.js) to AWS, Heroku, or any cloud platform of your choice.
+* Deploy the frontend using Netlify or Vercel.
+* Set up monitoring for your application using tools like Prometheus and Grafana for performance monitoring.
+
+9️⃣ Monitor and Optimize
+* Continuously monitor system performance (e.g., response time, user traffic) using monitoring tools.
+* Collect error logs and resolve issues promptly with the ELK stack (Elasticsearch, Logstash, Kibana).
+* Optimize the system for scalability to handle more users and stores efficiently.
+
+✅ Final Output
+* A functional product where users can search, compare, and track grocery prices in real-time.
+* Real-time notifications for price drops and special deals.
+* Admin tools for managing product listings, pricing, and monitoring system performance.
