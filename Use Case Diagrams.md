@@ -281,3 +281,29 @@ Example GitHub Actions workflow (ci-cd.yml):
 * A functional product where users can search, compare, and track grocery prices in real-time.
 * Real-time notifications for price drops and special deals.
 * Admin tools for managing product listings, pricing, and monitoring system performance.
+
+```mermaid
+graph TD;
+    A[Start] --> B[Set up GitHub Repository]
+    B --> C[Set up Database & Backend Development]
+    C --> D[Set up Web Scraping & API Integrations]
+    D --> E[Frontend Development (UI)]
+    E --> F[Implement Notification System]
+    F --> G[Testing & Quality Assurance]
+    G --> H[Set up Continuous Integration / Continuous Deployment (CI/CD)]
+    H --> I[Deployment & Monitoring]
+    I --> J[Monitor and Optimize]
+    J --> K[Final Output]
+    K --> L[Next Steps]
+    L --> M[End]
+
+    B -->|Includes| N[Create README]
+    C -->|Includes| O[Database Schema Design]
+    D -->|Includes| P[Web Scraping Code]
+    E -->|Includes| Q[React Components]
+    F -->|Includes| R[Push Notifications]
+    G -->|Includes| S[Unit and Integration Tests]
+    H -->|Includes| T[GitHub Actions Workflow]
+    I -->|Includes| U[Prometheus Monitoring]
+    J -->|Includes| V[Logstash Optimization]
+```
