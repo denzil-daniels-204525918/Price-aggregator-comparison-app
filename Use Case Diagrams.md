@@ -32,10 +32,11 @@ graph TD;
   Admin --> I
 
   DataProvider --> G
-```
+
   Advertiser --> H
 
   System --> A
   System --> B
   System --> C
   System --> D
+```
