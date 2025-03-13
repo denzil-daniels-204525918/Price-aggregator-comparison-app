@@ -1,0 +1,41 @@
+'''mermaid
+graph TD;
+  %% Define Actors
+  User["🧑‍💻 User"] 
+  Retailer["🏪 Retailer"]
+  Admin["🛠️ Admin"]
+  DataProvider["🔗 Data Provider"]
+  Advertiser["📢 Advertiser"]
+  System["🤖 System"]
+
+  %% Define Use Cases
+  A["🔍 Search for Products"]
+  B["📊 Compare Prices"]
+  C["📍 View Nearby Deals"]
+  D["📢 Receive Price Alerts"]
+  E["💾 Save/Share Items"]
+  F["📦 Manage Inventory"]
+  G["📡 Provide Data via API"]
+  H["📈 Advertise Promotions"]
+  I["🔧 Manage System Settings"]
+
+  %% Relationships
+  User --> A
+  User --> B
+  User --> C
+  User --> D
+  User --> E
+
+  Retailer --> F
+  Retailer --> H
+
+  Admin --> I
+
+  DataProvider --> G
+
+  Advertiser --> H
+
+  System --> A
+  System --> B
+  System --> C
+  System --> D
