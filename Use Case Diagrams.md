@@ -81,7 +81,7 @@ The objective of this Use Case Diagram is to visually represent the interactions
 * System
 
 ## Requirements
-### **Functional Requirements**
+#### **Functional Requirements**
 | | **Requirement** | **Description** | **Acceptance Criteria** |
 |-|---------------|----------------|--------------------------|
 | 01 | **Search Functionality** | Users can search for specific items across multiple stores. | Users can enter a product name, and relevant results from various retailers are displayed. |
@@ -97,7 +97,7 @@ The objective of this Use Case Diagram is to visually represent the interactions
 | 11 | **Advertisement Management** | Advertisers can promote products within the system. | Advertisers can create and manage promotions visible to users. |
 | 12 | **Admin Panel** | Administrators can manage system settings, users, and retailer permissions. | Admins have access to manage user roles, monitor system activity, and enforce policies. |
 
-### **Non-Functional Requirements**  
+##### **Non-Functional Requirements**  
 
 | **Requirement Category** | **Requirement** | **Acceptance Criteria** |
 |----------------|----------------------|--------------------------|
