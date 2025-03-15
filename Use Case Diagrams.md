@@ -36,6 +36,8 @@ graph TD;
   System -->|Processes Requests| B
   System -->|Sends Alerts| E
   System -->|Sends Alerts| H
+System -->|Retrieves Pricing| DataProvider
+
 ```
 
 ## Stakeholders
