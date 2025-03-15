@@ -47,39 +47,30 @@ graph TD;
   H -->|extends| F
 ```
 
-## Stakeholders
-* User
-* Retailer
-* Admin
-* DataProvider
-* Advertiser
-* System
+# Actors & Roles
+- **User**: Searches for products, compares prices, applies filters, views product details, and subscribes to price alerts. A login option is provided to personalize the experience.
+- **Retailer**: Updates pricing and publishes promotional items to attract customers.
+- **Admin**: Manages system data, user accounts, and ensures data integrity.
+- **Data Provider**: Supplies pricing data to the system via APIs or manual uploads.
+- **Advertiser**: Publishes promotional deals, which are displayed to users via the system.
 
-**Actors & Roles**  
-* User searches for products, compares prices, and subscribes to price alerts. A login option gets promted to get the user to register an account, so the system can better cater to the users needs.  
-* Retailer provides updated pricing and promotional items.  
-* Admin manages system data and ensures accuracy.  
-* Data Provider supplies aggregated pricing information from multiple sources.  
-* Advertiser publish promotional deals to attract customers.  
-* System processes user queries, stores data, and sends notifications.  
+# Relationships
 
-**Relationships**  
-1. Generalization (Inheritance)<br/>
-* Admin is a specialised role that extends system management functions. Both Retailers and Advertisers interact with the system, but in different ways.
-2. Inclusion (Mandatory Dependency)<br/>
-* “Compare Prices” ⟶ (includes) ⟶ “Search for Products”<br/>
-Before users can compare prices, they must first search for a product.
-* “Receive Price Drop Alerts” ⟶ (includes) ⟶ “Subscribe to Notifications”<br/>
-Users must opt-in for alerts before they can receive notifications.
-3. Extension (Optional Behavior)<br/>
-* “Apply Filters” ⟶ (extends) ⟶ “Search for Products”<br/>
-Filters enhance search but are not mandatory.
-* “Publish Promotions” ⟶ (extends) ⟶ “Update Pricing”<br/>
-Retailers can update prices without promotions, but promotions enhance visibility.
+## Generalization
+- Admin is a specialized role that extends system management functions.
+- Both Retailers and Advertisers interact with the system but in different ways.
 
-**Addressing Stakeholder Concerns**  
-* Users require an intuitive interface with efficient search and comparison tools. The system provides real-time price updates, filtering options, and personalized alerts to enhance their experience.
-* Retailers need a reliable way to update pricing and promotions. The system supports direct data integration via APIs or manual uploads, ensuring accuracy.
-* Admins must maintain data integrity and system performance. Role-based access control (RBAC) and monitoring tools are implemented to prevent unauthorized changes.
-* Data Providers require structured data ingestion. The system integrates APIs and web scraping mechanisms to ensure seamless data collection.
-* Advertisers aim to reach relevant users with promotions. The system highlights deals through notifications and promotional banners.
+## Inclusion
+- “Compare Prices” ⟶ (includes) ⟶ “Search for Products”
+- “Receive Price Drop Alerts” ⟶ (includes) ⟶ “Subscribe to Notifications”
+
+## Extension
+- “Apply Filters” ⟶ (extends) ⟶ “Search for Products”
+- “Publish Promotions” ⟶ (extends) ⟶ “Update Pricing”
+
+# Addressing Stakeholder Concerns
+- **Users**: The system provides an intuitive interface with efficient search, comparison tools, and personalized alerts to enhance their experience.
+- **Retailers**: The system supports direct data integration via APIs or manual uploads, ensuring accurate and timely updates.
+- **Admins**: Role-based access control (RBAC) and monitoring tools are implemented to maintain data integrity and system performance.
+- **Data Providers**: The system integrates APIs and web scraping mechanisms to ensure seamless data collection.
+- **Advertisers**: The system highlights promotional deals through notifications and banners, ensuring maximum visibility.
