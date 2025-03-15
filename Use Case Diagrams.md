@@ -59,11 +59,19 @@ graph TD;
   - Advertiser publish promotional deals to attract customers.  
   - System processes user queries, stores data, and sends notifications.  
 
-- **Relationships**  
-  - Users interact with the system to **search, compare, filter, and receive alerts**.  
-  - Retailers and data providers ensure the system has up-to-date pricing and information.  
-  - Advertisers contribute by publishing promotional content.  
-  - Admins oversee and manage system functionality.  
+**Relationships**  
+1. Generalization (Inheritance)<br/>
+* Admin is a specialised role that extends system management functions. Both Retailers and Advertisers interact with the system, but in different ways.
+2. Inclusion (Mandatory Dependency)<br/>
+* “Compare Prices” ⟶ (includes) ⟶ “Search for Products”<br/>
+Before users can compare prices, they must first search for a product.
+* “Receive Price Drop Alerts” ⟶ (includes) ⟶ “Subscribe to Notifications”<br/>
+Users must opt-in for alerts before they can receive notifications.
+3. Extension (Optional Behavior)<br/>
+* “Apply Filters” ⟶ (extends) ⟶ “Search for Products”<br/>
+Filters enhance search but are not mandatory.
+* “Publish Promotions” ⟶ (extends) ⟶ “Update Pricing”<br/>
+Retailers can update prices without promotions, but promotions enhance visibility.
 
 **Addressing Stakeholder Concerns**  
 * Users require an intuitive interface with efficient search and comparison tools. The system provides real-time price updates, filtering options, and personalized alerts to enhance their experience.
