@@ -8,9 +8,6 @@ graph TD;
   Admin["🛠️ Admin"]
   DataProvider["🔗 Data Provider"]
   Advertiser["📢 Advertiser"]
-  System["🤖 System"]
-  Database["🗂️ Database"]
-  Promotions["🎯 Promotions"]
   
   %% Define Use Cases
   A["Search for Products"]
@@ -18,9 +15,12 @@ graph TD;
   C["Apply Filters"]
   D["View Product Details"]
   E["Receive Price Drop Alerts"]
-  F["Retailers Update Pricing"]
+  F["Update Pricing"]
   G["Manage System Data"]
   H["Publish Promotions"]
+  I["Subscribe to Notifications"]
+  J["View Promotions"]
+  K["Manage User Accounts"]
   
   %% Relationships
   User --> A
@@ -28,17 +28,23 @@ graph TD;
   User --> C
   User --> D
   User --> E
+  User --> I
+  User --> J
 
-  DataProvider -->|Provides Data| System
-  Admin -->|Manages| Database
-  System -->|Stores & Retrieves| Database
-  Retailer -->|Supplies Pricing| DataProvider
-  Advertiser -->|Posts Promotions| Promotions
-  Promotions -->|Displayed via| System
-  System -->|Processes Requests| A
-  System -->|Processes Requests| B
-  System -->|Sends Alerts| E
-  System -->|Displays Deals| Promotions
+  Retailer --> F
+  Retailer --> H
+
+  Admin --> G
+  Admin --> K
+
+  DataProvider -->|Provides Data| F
+  Advertiser -->|Posts Promotions| H
+
+  %% Use Case Relationships
+  B -->|includes| A
+  E -->|includes| I
+  C -->|extends| A
+  H -->|extends| F
 ```
 
 ## Stakeholders
