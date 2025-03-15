@@ -47,28 +47,28 @@ graph TD;
   H -->|extends| F
 ```
 
-# Actors & Roles
+## Actors & Roles
 - **User**: Searches for products, compares prices, applies filters, views product details, and subscribes to price alerts. A login option is provided to personalize the experience.
 - **Retailer**: Updates pricing and publishes promotional items to attract customers.
 - **Admin**: Manages system data, user accounts, and ensures data integrity.
 - **Data Provider**: Supplies pricing data to the system via APIs or manual uploads.
 - **Advertiser**: Publishes promotional deals, which are displayed to users via the system.
 
-# Relationships
+## Relationships
 
-## Generalization
+**Generalization**
 - Admin is a specialized role that extends system management functions.
 - Both Retailers and Advertisers interact with the system but in different ways.
 
-## Inclusion
+**Inclusion**
 - “Compare Prices” ⟶ (includes) ⟶ “Search for Products”
 - “Receive Price Drop Alerts” ⟶ (includes) ⟶ “Subscribe to Notifications”
 
-## Extension
+**Extension**
 - “Apply Filters” ⟶ (extends) ⟶ “Search for Products”
 - “Publish Promotions” ⟶ (extends) ⟶ “Update Pricing”
 
-# Addressing Stakeholder Concerns
+## Addressing Stakeholder Concerns
 - **Users**: The system provides an intuitive interface with efficient search, comparison tools, and personalized alerts to enhance their experience.
 - **Retailers**: The system supports direct data integration via APIs or manual uploads, ensuring accurate and timely updates.
 - **Admins**: Role-based access control (RBAC) and monitoring tools are implemented to maintain data integrity and system performance.
