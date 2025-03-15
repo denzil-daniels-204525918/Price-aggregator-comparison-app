@@ -39,7 +39,8 @@ graph TD;
   System -->|Processes Requests| B
   System -->|Sends Alerts| E
   System -->|Displays Deals| Promotions
-
+```
+```mermaid
 graph TD;
   %% Define Actors
   User["🧑‍💻 User"] 
