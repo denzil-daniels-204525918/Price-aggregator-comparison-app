@@ -1,4 +1,4 @@
-# Use Case Diagrams
+# Use Case Diagram
 
 ```mermaid
 graph TD;
