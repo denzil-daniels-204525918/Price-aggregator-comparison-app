@@ -40,46 +40,6 @@ graph TD;
   System -->|Sends Alerts| E
   System -->|Displays Deals| Promotions
 ```
-```mermaid
-graph TD;
-  %% Define Actors
-  User["🧑‍💻 User"] 
-  Retailer["🏪 Retailer"]
-  Admin["🛠️ Admin"]
-  DataProvider["🔗 Data Provider"]
-  Advertiser["📢 Advertiser"]
-  System["🤖 System"]
-
-  %% Define Use Cases
-  A["Search for Products"]
-  B["Compare Prices"]
-  C["Apply Filters"]
-  D["View Product Details"]
-  E["Receive Price Drop Alerts"]
-  F["Retailers Update Pricing"]
-  G["System data"]
-  H["Publish Promotions"]
-  
-  %% Relationships
-  User --> A
-  User --> B
-  User --> C
-  User --> D
-  User --> E
-  User --> H
-
-  DataProvider -->|Provides Data| System
-  System --> Admin -->|Manages| G
-  F --> Retailer -->|Supplies Pricing| DataProvider
-  Advertiser -->|Posts Promotions| System
-
-  System -->|Processes Requests| A
-  System -->|Processes Requests| B
-  System -->|Sends Alerts| E
-  System -->|Sends Alerts| H
-System -->|Retrieves Pricing| DataProvider
-
-```
 
 ## Stakeholders
 * User
