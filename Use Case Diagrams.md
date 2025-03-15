@@ -49,15 +49,13 @@ graph TD;
 * Advertiser
 * System
 
-### **Explanation of the Diagram**  
-
-- **Actors & Roles**  
-  - User searches for products, compares prices, and subscribes to price alerts. A login option gets promted to get the user to register an account, so the system can better cater to the users needs.  
-  - Retailer provides updated pricing and promotional items.  
-  - Admin manages system data and ensures accuracy.  
-  - Data Provider supplies aggregated pricing information from multiple sources.  
-  - Advertiser publish promotional deals to attract customers.  
-  - System processes user queries, stores data, and sends notifications.  
+**Actors & Roles**  
+* User searches for products, compares prices, and subscribes to price alerts. A login option gets promted to get the user to register an account, so the system can better cater to the users needs.  
+* Retailer provides updated pricing and promotional items.  
+* Admin manages system data and ensures accuracy.  
+* Data Provider supplies aggregated pricing information from multiple sources.  
+* Advertiser publish promotional deals to attract customers.  
+* System processes user queries, stores data, and sends notifications.  
 
 **Relationships**  
 1. Generalization (Inheritance)<br/>
