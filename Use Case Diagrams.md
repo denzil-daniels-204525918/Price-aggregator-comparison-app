@@ -65,8 +65,9 @@ graph TD;
   - Advertisers contribute by publishing promotional content.  
   - Admins oversee and manage system functionality.  
 
-- **Addressing Stakeholder Concerns**  
-  - Ensures users can find the best deals.  
-  - Helps retailers maintain competitive pricing.  
-  - Allows advertisers to promote discounts effectively.  
-  - Supports admins in managing the system efficiently.  
+**Addressing Stakeholder Concerns**  
+* Users require an intuitive interface with efficient search and comparison tools. The system provides real-time price updates, filtering options, and personalized alerts to enhance their experience.
+* Retailers need a reliable way to update pricing and promotions. The system supports direct data integration via APIs or manual uploads, ensuring accuracy.
+* Admins must maintain data integrity and system performance. Role-based access control (RBAC) and monitoring tools are implemented to prevent unauthorized changes.
+* Data Providers require structured data ingestion. The system integrates APIs and web scraping mechanisms to ensure seamless data collection.
+* Advertisers aim to reach relevant users with promotions. The system highlights deals through notifications and promotional banners.
