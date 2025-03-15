@@ -17,7 +17,7 @@ graph TD;
   D["View Product Details"]
   E["Receive Price Drop Alerts"]
   F["Retailers Update Pricing"]
-  G["Admin Manages Data"]
+  G["Manages Data"]
   H["Publish Promotions"]
   
   %% Relationships
@@ -28,13 +28,14 @@ graph TD;
   User --> E
 
   Retailer -->|Provides Data| System
-  Admin -->|Manages| G
-  F -->|Supplies Pricing| DataProvider --> System
+  System --> Admin -->|Manages| G
+  F --> Retailer -->|Supplies Pricing| DataProvider --> System
   Advertiser -->|Posts Promotions| System
 
   System -->|Processes Requests| A
   System -->|Processes Requests| B
   System -->|Sends Alerts| E
+  System -->|Sends Alerts| H
 ```
 
 ## Stakeholders
