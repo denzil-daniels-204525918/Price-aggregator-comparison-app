@@ -29,7 +29,7 @@ graph TD;
 
   Retailer -->|Provides Data| System
   Admin -->|Manages| G
-  DataProvider -->|Supplies Pricing| F
+  F -->|Supplies Pricing| DataProvider --> System
   Advertiser -->|Posts Promotions| System
 
   System -->|Processes Requests| A
