@@ -21,7 +21,7 @@ Folder structure
                 ── Test and Use Case Document.md
                 ── Test Case Development.md
                 ── Use Case Diagrams.md
-                ── Use Case Specifications.md
+                ── Use Case Specifications.md 
     ── Architecture.md
     ── README.md
     ── Reflection.md

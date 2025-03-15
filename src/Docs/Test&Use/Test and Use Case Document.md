@@ -2,7 +2,7 @@
 
 ---
 ### 🎯 Case:
-**Price aggregator comparison system**
+**Price aggregator comparison system** 
 
 ---
 * [Test Case Development.md](Test%20Case%20Development.md)
