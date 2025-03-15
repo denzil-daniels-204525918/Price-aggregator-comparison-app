@@ -1,7 +1,7 @@
 # Use Case Specifications  
 
 ## 🎯 1. Use Case Name  
-**Price Comparison & Deal Notification System**  
+**Price aggregator comparison system**  
 
 ## 👥 2. Actors  
 - **User**: Searches for grocery items and compares prices.  
