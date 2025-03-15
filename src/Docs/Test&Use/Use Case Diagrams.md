@@ -1,5 +1,11 @@
 # Use Case Diagram
 
+---
+### 🎯 Use Case:
+**Price aggregator comparison system**
+
+---
+
 ```mermaid
 graph TD;
   %% Define Actors
@@ -46,15 +52,15 @@ graph TD;
   C -->|extends| A
   H -->|extends| F
 ```
-
-## Actors & Roles
+---
+### Actors & Roles
 - **User**: Searches for products, compares prices, applies filters, views product details, and subscribes to price alerts. A login option is provided to personalize the experience.
 - **Retailer**: Updates pricing and publishes promotional items to attract customers.
 - **Admin**: Manages system data, user accounts, and ensures data integrity.
 - **Data Provider**: Supplies pricing data to the system via APIs or manual uploads.
 - **Advertiser**: Publishes promotional deals, which are displayed to users via the system.
-
-## Relationships
+---
+### Relationships
 
 **Generalization**
 - Admin is a specialized role that extends system management functions.
@@ -67,10 +73,11 @@ graph TD;
 **Extension**
 - “Apply Filters” ⟶ (extends) ⟶ “Search for Products”
 - “Publish Promotions” ⟶ (extends) ⟶ “Update Pricing”
-
-## Addressing Stakeholder Concerns
+---
+### Addressing Stakeholder Concerns
 - **Users**: The system provides an intuitive interface with efficient search, comparison tools, and personalized alerts to enhance their experience.
 - **Retailers**: The system supports direct data integration via APIs or manual uploads, ensuring accurate and timely updates.
 - **Admins**: Role-based access control (RBAC) and monitoring tools are implemented to maintain data integrity and system performance.
 - **Data Providers**: The system integrates APIs and web scraping mechanisms to ensure seamless data collection.
 - **Advertisers**: The system highlights promotional deals through notifications and banners, ensuring maximum visibility.
+---

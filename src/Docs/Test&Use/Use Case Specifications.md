@@ -1,14 +1,12 @@
 # Use Case Specifications  
 
-## 🎯 1. Use Case Name  
+## 🎯 Use Case:  
 **Price aggregator comparison system**  
 
-# Use Case Specifications
+
+### Use Case 1: Search for Products
 
 ---
-
-## Use Case 1: Search for Products
-
 ### Description
 - **Purpose**: To allow users to search for grocery items and view available options.
 - **Scope**: Covers the process of searching for products, retrieving results, and displaying them to the user.
@@ -41,8 +39,9 @@
 
 ---
 
-## Use Case 2: Compare Prices
+### Use Case 2: Compare Prices
 
+---
 ### Description
 - **Purpose**: To enable users to compare prices of a product across multiple retailers.
 - **Scope**: Covers the process of retrieving prices, displaying comparisons, and allowing users to filter results.
@@ -73,7 +72,10 @@
 
 ---
 
-## Use Case 3: Subscribe to Price Drop Alerts
+### Use Case 3: Subscribe to Price Drop Alerts
+
+---
+
 
 ### Description
 - **Purpose**: To enable users to receive notifications when the price of a product drops.
@@ -106,7 +108,9 @@
 
 ---
 
-## Use Case 4: Update Pricing (Retailer)
+### Use Case 4: Update Pricing (Retailer)
+
+---
 
 ### Description
 - **Purpose**: To allow retailers to update product pricing and availability in the system.
@@ -136,8 +140,9 @@
 
 ---
 
-## Use Case 5: Manage System Data (Admin)
+### Use Case 5: Manage System Data (Admin)
 
+---
 ### Description
 - **Purpose**: To allow admins to manage system data, ensure accuracy, and resolve issues.
 - **Scope**: Covers data management, error resolution, and system monitoring.
@@ -167,7 +172,9 @@
 
 ---
 
-## Use Case 6: Publish Promotions (Advertiser)
+### Use Case 6: Publish Promotions (Advertiser)
+
+---
 
 ### Description
 - **Purpose**: To allow advertisers to publish promotional offers and targeted deals.
@@ -197,7 +204,9 @@
 
 ---
 
-## Use Case 7: Provide Real-Time Data (Data Provider)
+### Use Case 7: Provide Real-Time Data (Data Provider)
+
+---
 
 ### Description
 - **Purpose**: To allow data providers to supply real-time product pricing and availability data.
@@ -224,3 +233,4 @@
   - If there is a conflict with existing data, the system prompts the data provider to resolve the conflict.
 - **API Connection Failure**:
   - If the API connection fails, the system notifies the data provider: "Connection failed. Please try again later."
+---
