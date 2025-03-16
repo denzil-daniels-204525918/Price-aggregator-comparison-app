@@ -31,7 +31,7 @@ Folder structure
 
 ## Test and use case documentation
 
-* #### [Test and Use Case Document.md](src/Docs/Test%26Use/Test%20and%20Use%20Case%20Document.md)
+* [Test and Use Case Document.md](docs/Test%26Use/Test%20and%20Use%20Case%20Document.md)
 
 ## Additional Documentation
 

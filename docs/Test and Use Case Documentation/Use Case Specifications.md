@@ -235,4 +235,4 @@
   - If the API connection fails, the system notifies the data provider: "Connection failed. Please try again later."
 ---
 
-[Back to main document](Test%20and%20Use%20Case%20Document.md)
+[Back to main document](Test and Use Case Document.md)
