@@ -1,8 +1,25 @@
-# Use Case Specifications  
+# 📌 Use Case Specifications  
 
-## 🎯 Use Case:  
-**Price aggregator comparison system**  
+---
+### 🎯 Use Case: Price aggregator comparison system
 
+---
+
+## Overview
+
+This section outlines the **Use Case Specifications** for the **Price Aggregator Comparison System**, detailing the core functionalities and interactions between users, retailers, admins, data providers, and advertisers.
+
+    1. **Search for Products**: Users can search for grocery items, view matching results, and apply filters to refine their search. If no results are found or data sources are unavailable, the system provides appropriate feedback.
+    2. **Compare Prices**: Users can compare prices of a selected product across multiple retailers, apply filters (e.g., price, location), and choose the best option. The system handles scenarios where retailer data is missing or out of stock.
+    3. **Subscribe to Price Drop Alerts**: Users can subscribe to price drop alerts for their selected products, ensuring they are notified when prices change. Alternative flows account for situations like unlogged users or missing notification preferences.
+    4. **Update Pricing (Retailer)**: Retailers can upload or sync pricing data to keep the system up to date. The system handles errors like invalid data formats or connection failures to ensure data integrity.
+    5. **Manage System Data (Admin)**: Admins can manage system data, resolve inconsistencies, and monitor performance. They can also handle data corruption or unauthorized access attempts.
+    6. **Publish Promotions (Advertiser)**: Advertisers can upload promotional offers that are displayed to users. The system ensures that data is validated and any conflicts or API failures are appropriately managed.
+    7. **Provide Real-Time Data (Data Provider)**: Data providers sync real-time product pricing and availability. The system validates incoming data, handles conflicts, and confirms successful updates to maintain data accuracy.
+
+These use cases collectively outline the critical functionalities of the price comparison platform and ensure that all stakeholders can interact effectively with the system while addressing various edge cases and potential issues.
+
+---
 
 ### Use Case 1: Search for Products
 

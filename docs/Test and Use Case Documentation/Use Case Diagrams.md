@@ -1,8 +1,16 @@
-# Use Case Diagram
+# 📌 Use Case Diagram
 
 ---
-### 🎯 Use Case:
-**Price aggregator comparison system**
+### 🎯 Use Case: Price aggregator comparison system
+
+---
+## Overview
+
+This document presents the Use Case Diagram for the Price Aggregator Comparison System, outlining the key system interactions and stakeholders. It visualizes the roles and relationships of actors (User, Retailer, Admin, Data Provider, Advertiser) with various system use cases, such as searching for products, comparing prices, applying filters, and subscribing to notifications.
+
+The Actors & Roles section defines the specific responsibilities of each role, while the Relationships section explains generalizations, inclusions, and extensions between use cases, demonstrating how actions like price comparison and notifications build upon other core functionalities.
+
+Finally, the Addressing Stakeholder Concerns section highlights how the system addresses the needs of users, retailers, admins, data providers, and advertisers to ensure seamless interaction, data accuracy, and effective promotions. This diagram provides a clear structure for understanding user-system interactions and ensures stakeholder requirements are effectively met.
 
 ---
 

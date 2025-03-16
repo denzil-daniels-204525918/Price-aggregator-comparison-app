@@ -1,11 +1,14 @@
-# Test Case Documentation
+# 📌 Test Case Documentation
 
 ---
-### 🎯 Test Case:
-**Price aggregator comparison system**
+### 🎯 Use Case: Price aggregator comparison system
 
 ---
+## Overview
 
+This document outlines the test cases and scenarios for the Price Aggregator Comparison System to ensure its functionalities and performance meet the specified requirements. The functional test cases verify key system operations like product search, price comparison, subscription to alerts, and data updates, while the non-functional test scenarios assess system performance (e.g., handling 1,000 concurrent users) and security (e.g., secure access to the admin portal). Each test case includes clear steps, expected results, and success criteria to guide testing, ensuring the system meets both functional and performance standards.
+
+---
 ## Functional Test Cases
 
 | Test Case ID | Requirement ID | Description                          | Steps                                                                 | Expected Result                     | Actual Result | Status (Pass/Fail) |
