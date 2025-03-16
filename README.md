@@ -13,15 +13,14 @@
 * **Save or share:** Save list to notes or share via text applications.
 
 Folder structure
-
     
-    src──
-        ── Docs
+     ── Docs
             ── Test&Use
                 ── Test and Use Case Document.md
                 ── Test Case Development.md
                 ── Use Case Diagrams.md
                 ── Use Case Specifications.md 
+    src──
     ── Architecture.md
     ── README.md
     ── Reflection.md
