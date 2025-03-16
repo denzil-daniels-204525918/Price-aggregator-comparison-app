@@ -2,6 +2,7 @@
 
 ### A pricing aggregator and comparison application that aims to consolidate information from major grocery stores, allowing users find the best deals on food and beverages in a central location.
 
+---
 ## Key Features	
 
 * **Search Functionality:** Users can search for specific items.
@@ -27,7 +28,7 @@ Folder structure
     ── Specification.md
     ── SRD.md
     ── Stakeholder Analysis
-
+---
 ## Test and use case documentation
 
 * [Test and Use Case Document.md](docs/Test%20and%20Use%20Case%20Documentation/Test%20and%20Use%20Case%20Document.md)
