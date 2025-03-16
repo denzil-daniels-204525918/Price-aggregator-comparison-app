@@ -16,7 +16,12 @@
 Folder structure
     
      ── Docs
-            ── Test&Use
+            ── Agile Planning
+                ── Agile Planning Document
+                ── Backlog
+                ── Sprint Planning
+                ── User Stories
+            ── Test and Use Case Documentation
                 ── Test and Use Case Document.md
                 ── Test Case Development.md
                 ── Use Case Diagrams.md
@@ -29,13 +34,19 @@ Folder structure
     ── SRD.md
     ── Stakeholder Analysis
 ---
-## Test and use case documentation
 
-* [Test and Use Case Document.md](docs/Test%20and%20Use%20Case%20Documentation/Test%20and%20Use%20Case%20Document.md)
+## Initial sprint Documentation
+
+
+
+## Test and use case Documentation
+
+* [Test and Use Case Document](docs/Test%20and%20Use%20Case%20Documentation/Test%20and%20Use%20Case%20Document.md)
 
 ## Additional Documentation
 
-* #### Specifications: [Specification.md](Specification.md)#### Architecture: [Architecture.md](Architecture.md)
-* #### System Requirements Document (SRD): [SRD.md](SRD.md)
-* #### Stakeholder Analysis: [Stakeholder Analysis.md](Stakeholder%20Analysis.md)
-* #### Reflection: [Reflection.md](Reflection.md)
+* Specifications: [Specification](Specification.md)
+* Architecture: [Architecture](Architecture.md)
+* System Requirements Document (SRD): [SRD](SRD.md)
+* Stakeholder Analysis: [Stakeholder Analysis](Stakeholder%20Analysis.md)
+* Reflection: [Reflection](Reflection.md)
