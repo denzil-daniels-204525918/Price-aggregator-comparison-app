@@ -59,3 +59,4 @@ The Automated Kanban template is the best fit for this project because it stream
 The Automated Kanban template provides an efficient, low-maintenance Agile workflow, making it the best choice for managing the grocery price aggregator’s development while allowing room for scalability. 
 
 ---
+
