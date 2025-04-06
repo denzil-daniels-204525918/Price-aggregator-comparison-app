@@ -1,17 +1,22 @@
 # 📌 Activity Diagrams
 
-## 🎯 Objective
+## Objective
 This document presents UML activity diagrams for key workflows in the system. Each workflow is designed to enhance system efficiency, user experience, and stakeholder satisfaction.
 
+---
 
-✅ User Registration – Creating an account.
-✅ User Login & Authentication – Secure access.
-✅ Search for a Product – Finding grocery items.
-✅ Filter & Sort Prices – Customizing search results.
-✅ Save a Shopping List – Organizing favorite items.
-✅ Share a Shopping List – Sending lists to others.
-✅ Set Price Alerts – Notifying users of price drops.
-✅ Retailer Price Updates – Ensuring accurate data.
+### 🎯 Case: Price aggregator comparison system
+
+---
+
+* ✅ [User Registration](user_account.md) – Creating an account. 
+* ✅ [User Login & Authentication](user_account.md) – Secure access.
+* ✅ [Search for a Product](product.md) – Finding grocery items.
+* ✅ [Filter & Sort Prices](user_account.md) – Customizing search results.
+* ✅ [Save a Shopping List](user_account.md) – Organizing favorite items.
+* ✅ [Share a Shopping List](user_account.md) – Sending lists to others.
+* ✅ [Set Price Alerts](price_alert.md) – Notifying users of price drops.
+* ✅ [Retailer Price Updates](retailer_profile.md) – Ensuring accurate data.
 
 ---
 # Activity Workflow Modeling
@@ -156,3 +161,5 @@ graph TD;
 These workflows align with the system’s functional requirements and use cases by ensuring **smooth user interactions, real-time updates, and a seamless shopping experience**.
 
 ---
+
+* [Back to README.md](../../../README.md)
