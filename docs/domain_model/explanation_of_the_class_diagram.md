@@ -15,12 +15,12 @@
 - **Promotion**: Represents a promotional offer for a product. Includes attributes for promotion ID, description, and discount, with methods to apply promotions.
 
 ### Relationships:
-- **User to PriceAlert**: A user can subscribe to multiple price alerts, but each alert is associated with one user (1 -- 0..*).
-- **User to SavedList**: A user can save multiple products in a saved list (1 -- 0..*).
-- **Retailer to Product**: A retailer can list multiple products, but each product is associated with only one retailer (1 -- 0..*).
-- **User to Product**: A user can view multiple products, and products can be viewed by many users (1 -- 0..*).
-- **Product to Promotion**: A product can have multiple promotions applied, and each promotion can apply to multiple products (1 -- 0..*).
-- **SavedList to Product**: A saved list can contain multiple products, and each product can appear in multiple lists (1 -- 0..*).
+- **User to PriceAlert**: A user can subscribe to multiple price alerts, but each alert is associated with one user `(1 -- 0..*)`.
+- **User to SavedList**: A user can save multiple products in a saved list `(1 -- 0..*)`.
+- **Retailer to Product**: A retailer can list multiple products, but each product is associated with only one retailer `(1 -- 0..*)`.
+- **User to Product**: A user can view multiple products, and products can be viewed by many users `(1 -- 0..*)`.
+- **Product to Promotion**: A product can have multiple promotions applied, and each promotion can apply to multiple products `(1 -- 0..*)`.
+- **SavedList to Product**: A saved list can contain multiple products, and each product can appear in multiple lists `(1 -- 0..*)`.
 
 ### Key Design Decisions:
 
