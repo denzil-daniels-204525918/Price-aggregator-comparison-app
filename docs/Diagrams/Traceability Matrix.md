@@ -5,13 +5,33 @@
 ### 🎯 Case: Price aggregator comparison system
 
 ---
+This project models key system behaviors using **UML State Transition Diagrams** to support planning, design, and traceability.
+
+### 📊 Diagrams Overview
+| Object           | Activity Diagram & Explanation                                     | State Transition Diagram & Explanation                                  |
+|------------------|--------------------------------------------------------------------|-------------------------------------------------------------------------|
+| User Account     | [View](docs/Diagrams/Activity%20Diagrams/user_account.md)          | [View](./docs/explanations/user_account.md)                             |
+| User Login & Authentication | [View](Diagrams/Activity%20Diagrams/user_account.md)    | [View](./docs/explanations/user_account.md)                             |
+| Product          | [View](docs/Diagrams/Activity%20Diagrams/product.md)               | [View](docs/Diagrams/State%20Transition%20Diagrams/product.md)          |
+| Price Alert      | [View](docs/Diagrams/Activity%20Diagrams/price_alert.md)           | [View](docs/Diagrams/State%20Transition%20Diagrams/price_alert.md)      |
+| Retailer Profile | [View](docs/Diagrams/Activity%20Diagrams/retailer_profile.md)      | [View](docs/Diagrams/State%20Transition%20Diagrams/retailer_profile.md) |
+| Saved List       | [View](Diagrams/Activity%20Diagrams/user_account.md)               | [View](./docs/explanations/user_account.md)                             |
+| Subscription     | [View](Diagrams/Activity%20Diagrams/user_account.md)               | [View](./docs/explanations/user_account.md)                             |
+| Retailer Deal Submission | [View](Diagrams/Activity%20Diagrams/user_account.md)       | [View](./docs/explanations/user_account.md)                             |
+
+---
+Overview
+
+* [Activity Diagrams.md](docs/Diagrams/Activity%20Diagrams/Activity%20Diagrams.md)
+* [State Transition Diagrams.md](docs/Diagrams/State%20Transition%20Diagrams/State%20Transition%20Diagrams.md)
+---
 
 ### 📌 Functional Mapping
 
 Each diagram supports functional requirements and sprint work outlined in:
 
 * [SRD.md](SRD.md)
-* [Agile Planning Document.md](../Agile%20Planning/Agile%20Planning%20Document.md)
+* [Agile Planning Document.md](Agile%20Planning/Agile%20Planning%20Document.md)
 
 ---
 
@@ -25,8 +45,5 @@ Each diagram supports functional requirements and sprint work outlined in:
 | Promotion Content          | FR-009: Filtered promotions view                | US-08: "As a user, I want to filter deals by retailer."                          |
 | Saved List                 | FR-010: Saved items                             | US-09: "As a user, I want to save my favorite products."                         |
 
----
-* [Activity Diagrams.md](Activity%20Diagrams/Activity%20Diagrams.md)
-* [State Transition Diagrams.md](State%20Transition%20Diagrams/State%20Transition%20Diagrams.md)
 ---
 * [Back to README](../../../README.md)
