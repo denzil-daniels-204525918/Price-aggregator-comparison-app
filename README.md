@@ -16,12 +16,12 @@
 Folder structure
     
      ── Docs
-            ── Agile Planning
-                ── Agile Planning Document
-                ── Backlog
-                ── Reflection  
-                ── Sprint Planning
-                ── User Stories
+            ── agile_planning
+                ── agile_planning_document
+                ── backlog
+                ── reflection  
+                ── sprint_planning
+                ── user_stories
             ──  Diagrams
                 ── Activity Diagrams
                     ── Activity Diagrams.md
@@ -37,6 +37,11 @@ Folder structure
                     ── user_account.md
                 ──  reflection.md
                 ──  Traceability Matrix.md
+            ──  domain_model
+                ── class_diagram.js
+                ── domain_model_documentation.md
+                ── explanation_of_the_class_diagram.md
+                ── reflection.md
             ──  Kanban
                 ──  index.md
                 ──  kanban_board.md

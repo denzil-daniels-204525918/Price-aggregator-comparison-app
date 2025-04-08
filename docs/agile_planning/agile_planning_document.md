@@ -8,7 +8,7 @@
 
 This document outlines the Agile planning process for the Price Aggregator Comparison System:
 
-* [Backlog](Backlog.md): A prioritized list of user stories and tasks that define the scope of work for the system.
+* [Backlog](backlog): A prioritized list of user stories and tasks that define the scope of work for the system.
 
 * [Sprint Planning](Sprint%20Planning.md): Details on how the development team will plan and execute the initial sprint, breaking down user stories into actionable tasks.
 

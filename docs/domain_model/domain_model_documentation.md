@@ -138,3 +138,6 @@ This document presents a detailed domain model for the Grocery Price Aggregator 
 - **AdvertisementCampaigns** must be reviewed before activation
 
 ---
+
+* [View Class Diagram](class_diagram.js)
+* [View Explanation of the Class Diagram](explanation_of_the_class_diagram.md)
