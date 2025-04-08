@@ -67,11 +67,11 @@ Folder structure
 
 ## Additional Documentation
 
-* Specifications: [Specification](Specification.md)
-* Architecture: [Architecture](Architecture.md)
-* System Requirements Document (SRD): [SRD](SRD.md)
+* Specifications: [Specification](docs/specification/Specification.md)
+* Architecture: [Architecture](docs/specification/Architecture.md)
+* System Requirements Document (SRD): [SRD](docs/specification/system_requirements_document.md)
 * Stakeholder Analysis: [Stakeholder Analysis](Stakeholder%20Analysis.md)
-* Reflection: [Reflection](Reflection.md)
+* Reflection: [Reflection](docs/specification/Reflection.md)
 
 ---
 
@@ -102,7 +102,7 @@ Overview
 
 Each diagram supports functional requirements and sprint work outlined in:
 
-* [SRD.md](SRD.md)
+* [SRD.md](docs/specification/system_requirements_document.md)
 * [Agile Planning Document.md](Agile%20Planning/Agile%20Planning%20Document.md)
 
 ---
