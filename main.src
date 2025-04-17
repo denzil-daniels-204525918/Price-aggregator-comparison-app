@@ -1,0 +1,84 @@
+class User:
+    def __init__(self, user_id, name, email, password):
+        self.user_id = user_id
+        self.name = name
+        self.email = email
+        self.password = password
+
+    def login(self):
+        print(f"User {self.name} logged in.")
+
+    def logout(self):
+        print(f"User {self.name} logged out.")
+
+
+class Product:
+    def __init__(self, product_id, name, price, description):
+        self.product_id = product_id
+        self.name = name
+        self.price = price
+        self.description = description
+
+    def add_product(self):
+        print(f"Product {self.name} added.")
+
+    def remove_product(self):
+        print(f"Product {self.name} removed.")
+
+
+class PriceAlert:
+    def __init__(self, alert_id, price_threshold, is_active=True):
+        self.alert_id = alert_id
+        self.price_threshold = price_threshold
+        self.is_active = is_active
+
+    def subscribe(self):
+        self.is_active = True
+        print(f"Price alert {self.alert_id} subscribed.")
+
+    def unsubscribe(self):
+        self.is_active = False
+        print(f"Price alert {self.alert_id} unsubscribed.")
+
+
+class Retailer:
+    def __init__(self, retailer_id, name, contact_info):
+        self.retailer_id = retailer_id
+        self.name = name
+        self.contact_info = contact_info
+        self.products = []
+
+    def add_product(self, product):
+        self.products.append(product)
+        print(f"Retailer {self.name} added product {product.name}.")
+
+    def remove_product(self, product):
+        self.products.remove(product)
+        print(f"Retailer {self.name} removed product {product.name}.")
+
+
+class SavedList:
+    def __init__(self, list_id, user_id):
+        self.list_id = list_id
+        self.user_id = user_id
+        self.products = []
+
+    def add_product_to_list(self, product):
+        self.products.append(product)
+        print(f"Product {product.name} added to saved list.")
+
+    def remove_product_from_list(self, product):
+        self.products.remove(product)
+        print(f"Product {product.name} removed from saved list.")
+
+
+class Promotion:
+    def __init__(self, promotion_id, description, discount):
+        self.promotion_id = promotion_id
+        self.description = description
+        self.discount = discount
+
+    def apply_promotion(self, product):
+        original_price = product.price
+        product.price -= self.discount
+        print(f"Promotion applied: {original_price} -> {product.price}")
