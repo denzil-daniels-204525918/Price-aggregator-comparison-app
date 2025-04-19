@@ -1,6 +1,6 @@
 import unittest
-from src.promotion import Promotion
-from src.product import Product
+from src.main.promotion import Promotion
+from src.main.product import Product
 
 class TestPromotion(unittest.TestCase):
     def test_promotion_creation(self):

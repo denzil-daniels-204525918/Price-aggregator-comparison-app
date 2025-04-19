@@ -1,5 +1,5 @@
 import unittest
-from src.price_alert import PriceAlert
+from src.main.price_alert import PriceAlert
 
 class TestPriceAlert(unittest.TestCase):
     def test_price_alert_creation(self):

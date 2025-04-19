@@ -1,6 +1,6 @@
 import unittest
-from src.retailer import Retailer
-from src.product import Product
+from src.main.retailer import Retailer
+from src.main.product import Product
 
 class TestRetailer(unittest.TestCase):
     def test_retailer_creation(self):

@@ -1,6 +1,6 @@
 import unittest
-from src.saved_list import SavedList
-from src.product import Product
+from src.main.saved_list import SavedList
+from src.main.product import Product
 
 class TestSavedList(unittest.TestCase):
     def test_saved_list_creation(self):

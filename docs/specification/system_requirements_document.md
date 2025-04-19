@@ -3,7 +3,7 @@ This document categorizes functional and non-functional requirements, aligning t
 * **Functional Requirements:** Defines the core features and functionality of the system. Focus on capabilities that directly address stakeholder concerns. Includes acceptance criteria for critical requirements. <br/>
 * **Non-Functional Requirements:** Address the overall system usability, deployability, maintenance, scalability, security and performance. <br/><br/>
 
-**Also view:** #### Stakeholder Analysis: [Stakeholder Analysis.md](Stakeholder Analysis.md) 
+**Also view:** #### Stakeholder Analysis: [Stakeholder Analysis.md](stakeholder_analysis) 
 
 ## 📌 Functional Requirements
 

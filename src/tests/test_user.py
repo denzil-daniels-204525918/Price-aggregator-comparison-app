@@ -1,5 +1,5 @@
 import unittest
-from src.user import User
+from src.main.user import User
 
 class TestUser(unittest.TestCase):
     def test_user_creation(self):
