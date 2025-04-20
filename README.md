@@ -13,6 +13,12 @@
 * **Notifications:** Send alerts for new deals or when prices drop for a user’s favorite items.
 * **Save or share:** Save list to notes or share via text applications.
 
+## 🧪 Language Choice & Key Design Decisions
+
+➡️ [Click here](#-language-choice-python) to jump to the section explaining why Python was chosen and how key classes were designed using object-oriented principles and creational design patterns.
+
+---
+
 Folder structure
 
     ├── docs
@@ -21,121 +27,115 @@ Folder structure
     │   │   ├── backlog.md
     │   │   ├── reflection.md
     │   │   ├── sprint_planning.md
-    │   │   ├── user_stories.md
+    │   │   └── user_stories.md
     │   ├── diagrams
     │   │   ├── activity_diagrams
     │   │   │   ├── activity_diagrams.md
     │   │   │   ├── price_alert.md
     │   │   │   ├── product.md
     │   │   │   ├── retailer_profile.md
-    │   │   │   ├── user_account.md
+    │   │   │   └── user_account.md
     │   │   ├── state_transition_diagrams
     │   │   │   ├── price_alert.md
     │   │   │   ├── product.md
     │   │   │   ├── retailer_profile.md
     │   │   │   ├── state_transition_diagrams.md
-    │   │   │   ├── user_account.md
+    │   │   │   └── user_account.md
     │   │   ├── reflection.md
     │   │   ├── Traceability Matrix.md
     │   ├── domain_model
     │   │   ├── class_diagram.js
     │   │   ├── domain_model_documentation.md
     │   │   ├── explanation_of_the_class_diagram.md
-    │   │   ├── reflection.md
+    │   │   └── reflection.md
     │   ├── kanban
     │   │   ├── index.md
     │   │   ├── kanban_board.md
     │   │   ├── kanban_explanation.md
     │   │   ├── reflection.md
-    │   │   ├── template_analysis.md
+    │   │   └── template_analysis.md
     │   ├── specification
     │   │   ├── architecture.md
     │   │   ├── reflection.md
     │   │   ├── specification.md
     │   │   ├── stakeholder_analysis.md
-    │   │   ├── system_requirements_document.md
-
-
-
-
-
-
-
-│   ├── Test and Use Case Documentation
-│   │   ├── Test Case Development.md
-│   │   ├── Use Case Diagrams.md
-│   │   ├── Test and Use Case Document.md
-│   │   ├── Reflection.md
-│   │   ├── Use Case Specifications.md
-│   ├── notes.md
-├── README.md
-├── project
-│   ├── build.properties
-│   └── .DS_Store
-├── src
-│   ├── __init__.py
-│   ├── main
-│   │   ├── __init__.py
-│   │   ├── user.py
-│   │   ├── promotion.py
-│   │   ├── saved_list.py
-│   │   ├── retailer.py
-│   │   ├── product.py
-│   │   ├── price_alert.py
-│   │   ├── creational_patterns
-│   │   │   ├── simple_factory
-│   │   │   │   ├── __init__.py
-│   │   │   │   ├── product_factory.py
-│   │   │   ├── prototype
-│   │   │   │   ├── __init__.py
-│   │   │   │   ├── clone_example.py
-│   │   │   │   ├── clone_method.py
-│   │   │   ├── factory_method
-│   │   │   │   ├── __init__.py
-│   │   │   │   ├── data_source.py
-│   │   │   │   ├── data_source_factory.py
-│   │   │   │   ├── picknpay_data_source.py
-│   │   │   │   ├── checkers_data_source.py
-│   │   │   ├── singleton
-│   │   │   │   ├── __init__.py
-│   │   │   │   ├── database_connection.py
-│   │   │   │   ├── database_connection_example.py
-│   │   │   ├── abstract_factory
-│   │   │   │   ├── __init__.py
-│   │   │   │   ├── retailer_a_factory.py
-│   │   │   │   ├── retailer_data_factory.py
-│   │   │   │   ├── promotion.py
-│   │   │   │   ├── product.py
-│   │   │   │   ├── price_alert.py
-│   │   │   ├── builder
-│   │   │   │   ├── __init__.py
-│   │   │   │   ├── promotion.py
-│   │   │   │   ├── product_report.py
-│   │   │   │   ├── price_alert.py
-│   │   │   │   ├── product_report_builder.py
-│   ├── tests
-│   │   ├── __init__.py
-│   │   ├── test_user.py
-│   │   ├── test_price_alert.py
-│   │   ├── test_promotion.py
-│   │   ├── test_saved_list.py
-│   │   ├── test_product.py
-│   │   ├── test_retailer.py
-│   │   ├── creational_pattern
-│   │   │   ├── __init__.py
-│   │   │   ├── test_singleton.py
-│   │   │   ├── test_simple_factory.py
-│   │   │   ├── test_prototype.py
-│   │   │   ├── test_builder.py
-│   │   │   ├── test_abstract_factory.py
-│   │   │   ├── test_factory_method.py
-│   └── .DS_Store
+    │   │   └── system_requirements_document.md
+    │   ├── test_use_case_documentation
+    │   │   ├── reflection.md
+    │   │   ├── test_case_development.md
+    │   │   ├── test_use_case_documentation.md
+    │   │   ├── use_case_diagrams.md
+    │   │   └── use_case_specifications.md
+    │   ├── notes.md
+    ├── project
+    │   └── build.properties
+    ├── src
+    │   ├── main
+    │   │   ├── creational_patterns
+    │   │   │   ├── abstract_factory
+    │   │   │   │   ├── __init__.py
+    │   │   │   │   ├── price_alert.py
+    │   │   │   │   ├── product.py
+    │   │   │   │   ├── promotion.py
+    │   │   │   │   ├── retailer_a_factory.py
+    │   │   │   │   └── retailer_data_factory.py
+    │   │   │   ├── builder
+    │   │   │   │   ├── __init__.py
+    │   │   │   │   ├── price_alert.py
+    │   │   │   │   ├── product_report.py
+    │   │   │   │   ├── product_report_builder.py
+    │   │   │   │   └── promotion.py
+    │   │   │   ├── factory_method
+    │   │   │   │   ├── __init__.py
+    │   │   │   │   ├── checkers_data_source.py
+    │   │   │   │   ├── data_source.py
+    │   │   │   │   ├── data_source_factory.py
+    │   │   │   │   └── picknpay_data_source.py
+    │   │   │   ├── prototype
+    │   │   │   │   ├── __init__.py
+    │   │   │   │   ├── clone_example.py
+    │   │   │   │   └── clone_method.py
+    │   │   │   ├── simple_factory
+    │   │   │   │   ├── __init__.py
+    │   │   │   │   └── product_factory.py
+    │   │   │   └── singleton
+    │   │   │       ├── __init__.py
+    │   │   │       ├── database_connection.py
+    │   │   │       └── database_connection_example.py
+    │   │   ├── __init__.py
+    │   │   ├── price_alert.py
+    │   │   ├── product.py
+    │   │   ├── promotion.py
+    │   │   ├── retailer.py
+    │   │   ├── saved_list.py
+    │   │   └── user.py
+    │   ├── tests
+    │   │   ├── creational_pattern
+    │   │   │   ├── __init__.py
+    │   │   │   ├── test_abstract_factory.py
+    │   │   │   ├── test_builder.py
+    │   │   │   ├── test_factory_method.py
+    │   │   │   ├── test_prototype.py
+    │   │   │   ├── test_simple_factory.py
+    │   │   │   └── test_singleton.py
+    │   │   ├── __init__.py
+    │   │   ├── test_price_alert.py
+    │   │   ├── test_product.py
+    │   │   ├── test_promotion.py
+    │   │   ├── test_retailer.py
+    │   │   ├── test_saved_list.py
+    │   │   └── test_user.py
+    │   ├── __init__.py
+    │   └── main.py
+    ├──build.sbt
+    ├──gitinore
+    ├──main.src
+    └── README.md
 
 ---
 
 ## Initial sprint Documentation
-
-
+[Agile planning document](docs/agile_planning/agile_planning_document.md)
 
 ## Test and use case Documentation
 
@@ -146,8 +146,7 @@ Folder structure
 * Specifications: [Specification](docs/specification/specification)
 * Architecture: [Architecture](docs/specification/architecture)
 * System Requirements Document (SRD): [SRD](docs/specification/system_requirements_document.md)
-* Stakeholder Analysis: [Stakeholder Analysis](Stakeholder%20Analysis.md)
-* Reflection: [Reflection](docs/specification/reflection)
+* Stakeholder Analysis: [Stakeholder Analysis](docs/specification/stakeholder_analysis.md)
 
 ---
 
@@ -256,3 +255,15 @@ Together, these patterns promote modularity, scalability, and maintainability, w
 
 ---
 
+
+### ✅ Running Tests
+
+To run the test suite locally:
+
+1. Ensure you have `pytest` installed:
+   ```bash
+   pip install pytest
+
+2. Navigate to the root directory and run: 
+   ```bash
+   pytest src/tests
