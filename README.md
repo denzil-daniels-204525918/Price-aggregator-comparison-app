@@ -127,9 +127,10 @@ Folder structure
     │   │   └── test_user.py
     │   ├── __init__.py
     │   └── main.py
-    ├──build.sbt
-    ├──gitinore
-    ├──main.src
+    ├── build.sbt
+    ├── changelog.md
+    ├── gitinore
+    ├── main.src
     └── README.md
 
 ---
