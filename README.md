@@ -21,10 +21,12 @@
 
 ➡️ [Click here](#-language-choice-python) 
 
-## Factory Pattern
+### Factory Pattern
 ➡️ [Click here](#Storage-Abstraction-Mechanism)
 
+### Repository Interface Design
 
+➡️ [Click here](#-Justification-for-Repository-Design)
 
 ---
 
@@ -319,6 +321,7 @@ To run the test suite locally:
    pytest src/tests
 
 ---
+
 # Repository Interface Design
 
 ### ✅ Justification for Repository Design
