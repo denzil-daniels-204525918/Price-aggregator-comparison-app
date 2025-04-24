@@ -13,9 +13,18 @@
 * **Notifications:** Send alerts for new deals or when prices drop for a user’s favorite items.
 * **Save or share:** Save list to notes or share via text applications.
 
-## 🧪 Language Choice & Key Design Decisions
+---
 
-➡️ [Click here](#-language-choice-python) to jump to the section explaining why Python was chosen and how key classes were designed using object-oriented principles and creational design patterns.
+## **_Quick Links_**
+
+### 🧪 Language Choice & Key Design Decisions
+
+➡️ [Click here](#-language-choice-python) 
+
+## Factory Pattern
+➡️ [Click here](#Storage-Abstraction-Mechanism)
+
+
 
 ---
 
@@ -333,3 +342,25 @@ We can swap out the in-memory store with other storage options (like a database 
 * **Future-Proofing for Other Backends:**<br/>
 We are future-proofing by designing the system to easily switch storage backends. Adding a new storage type (e.g., database) will be straightforward. 
 This ensures the application can scale when switching to a more permanent solution like a database.
+
+----
+### Storage-Abstraction Mechanism
+
+✅ Why the Factory Pattern 
+
+### 🔁 1. Support multiple storage backends
+
+* App may start with in-memory storage, but later Migrate to a PostgreSQL or MongoDB backend. 
+* Add support for external APIs or cloud databases.
+* A RepositoryFactory allows you to easily switch.
+
+### 🧱 2. Clear separation of concerns
+
+* The factory pattern keeps your services clean. They ask the factory for a repository — without knowing or caring how it’s implemented.
+
+### ⚙️ 3. Easy extensibility
+* You can plug in new backends (e.g., FirestorePromotionRepository, RedisCacheRepository) without changing your service logic.
+
+### 🧪 4. Simpler for testing
+
+* You can inject mock or test versions of repositories easily via the factory.
