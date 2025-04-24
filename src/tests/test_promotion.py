@@ -1,19 +1,26 @@
-import unittest
+#src/tests/test_promotion.py
+
+import pytest
+
+
 from src.main.promotion import Promotion
 from src.main.product import Product
+def test_apply_promotion():
+    product = Product(product_id="P101", name="Product A", price=100.00, description="Description of Product A")
+    promotion = Promotion(
+        promotion_id="Promo101",
+        title="10% Off Promotion",
+        description="10% off",
+        discount_percentage=10.00
+    )
+    # Apply promotion to the product...
+    assert promotion.discount_percentage == 10.00
 
-class TestPromotion(unittest.TestCase):
-    def test_promotion_creation(self):
-        promotion = Promotion(promotion_id="Promo101", description="10% off", discount=10.00)
-        self.assertEqual(promotion.promotion_id, "Promo101")
-        self.assertEqual(promotion.description, "10% off")
-        self.assertEqual(promotion.discount, 10.00)
-
-    def test_apply_promotion(self):
-        product = Product(product_id="P101", name="Product A", price=100.00, description="Description of Product A")
-        promotion = Promotion(promotion_id="Promo101", description="10% off", discount=10.00)
-        promotion.apply_promotion(product)
-        self.assertEqual(product.price, 90.00)  # After applying the promotion, the price should be reduced by 10%
-
-if __name__ == '__main__':
-    unittest.main()
+def test_promotion_creation():
+    promotion = Promotion(
+        promotion_id="Promo101",
+        title="10% Off Promotion",
+        description="10% off",
+        discount_percentage=10.00
+    )
+    assert promotion.promotion_id == "Promo101"

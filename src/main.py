@@ -53,7 +53,7 @@ if __name__ == "__main__":
 from main.creational_patterns.builder.product_report_builder import ProductReportBuilder
 from main.product import Product
 from main.promotion import Promotion
-from main.price_alert import PriceAlert
+from src.main.price_alert import PriceAlert
 
 def main():
     builder = ProductReportBuilder()
@@ -75,3 +75,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+if __name__ == "__main__":
+    factory = RepositoryFactory(storage_type="inmemory")
+    service = PromotionService(factory)
+
+    promo = Promotion(promotion_id="promo1", title="Easter Sale", description="20% off!", discount_percentage=20)
+    service.create_promotion(promo)
+
+    print(service.get_all_promotions())

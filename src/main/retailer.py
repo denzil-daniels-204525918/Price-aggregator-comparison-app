@@ -1,4 +1,4 @@
-# src/retailer.py
+# src/main/retailer.py
 
 class Retailer:
     def __init__(self, retailer_id: str, name: str, contact_info: str):

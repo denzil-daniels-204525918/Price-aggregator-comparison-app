@@ -45,6 +45,7 @@ Folder structure
     │   │   ├── Traceability Matrix.md
     │   ├── domain_model
     │   │   ├── class_diagram.js
+    │   │   ├── class_diagram_updated.js
     │   │   ├── domain_model_documentation.md
     │   │   ├── explanation_of_the_class_diagram.md
     │   │   └── reflection.md
@@ -102,6 +103,34 @@ Folder structure
     │   │   │       ├── __init__.py
     │   │   │       ├── database_connection.py
     │   │   │       └── database_connection_example.py
+    │   │   ├── factories
+    │   │   │   └── reposaitory_factory.py
+    │   │   ├── module
+    │   │   │   ├── __init__.py
+    │   │   │   ├── module_saved_list.py
+    │   │   │   └── module_user.py
+    │   │   ├── repositories
+    │   │   │   ├── inmemory
+    │   │   │   │   ├── __init__.py
+    │   │   │   │   ├── inmemory_price_alert_repository.py
+    │   │   │   │   ├── inmemory_product_repository.py
+    │   │   │   │   ├── inmemory_promotion_repository.py
+    │   │   │   │   ├── inmemory_retailer_repository.py
+    │   │   │   │   ├── inmemory_saved_list_repository.py
+    │   │   │   │   └── inmemory_user_repository.py
+    │   │   │   ├── promotion
+    │   │   │   │   ├── __init__.py
+    │   │   │   │   ├── database_promotion_repository.py
+    │   │   │   │   ├── filesystem_promotion_repository.py
+    │   │   │   │   └── redis_promotion_repository.py
+    │   │   │   ├── __init__.py
+    │   │   │   ├── price_alert_repository.py
+    │   │   │   ├── product_repository.py
+    │   │   │   ├── promotion_repository.py
+    │   │   │   ├── repository.py
+    │   │   │   ├── retailer_repository.py
+    │   │   │   ├── saved_list_repository.py
+    │   │   │   └── user_repository.py
     │   │   ├── __init__.py
     │   │   ├── price_alert.py
     │   │   ├── product.py
@@ -118,10 +147,20 @@ Folder structure
     │   │   │   ├── test_prototype.py
     │   │   │   ├── test_simple_factory.py
     │   │   │   └── test_singleton.py
+    │   │   ├── factory
+    │   │   │   └── test_repository_factory.py
     │   │   ├── __init__.py
+    │   │   ├── _test_inmemory_price_alert_repository.py
+    │   │   ├── _test_inmemory_product_repository.py
+    │   │   ├── _test_inmemory_promotion_repository.py
+    │   │   ├── _test_inmemory_repository.py
+    │   │   ├── _test_inmemory_retailer_repository.py
+    │   │   ├── _test_inmemory_saved_list_repository.py
+    │   │   ├── _test_inmemory_user_repository.py
     │   │   ├── test_price_alert.py
     │   │   ├── test_product.py
     │   │   ├── test_promotion.py
+    │   │   ├── test_promotion_repository.py
     │   │   ├── test_retailer.py
     │   │   ├── test_saved_list.py
     │   │   └── test_user.py
@@ -132,6 +171,7 @@ Folder structure
     ├── gitinore
     ├── main.src
     └── README.md
+
 
 ---
 
@@ -268,3 +308,28 @@ To run the test suite locally:
 2. Navigate to the root directory and run: 
    ```bash
    pytest src/tests
+
+---
+# Repository Interface Design
+
+### ✅ Justification for Repository Design
+
+* **Generic Repository Interface:**<br/>
+By using a generic repository, we avoid writing duplicate methods for each type of object we want 
+to store. Instead, we can use this one interface for all entities.
+
+* **Entity-Specific Repositories:**<br/>
+The ProductRepository is specific to the Product entity. It provides the implementation of the CRUD operations using an in-memory storage (_storage dictionary). 
+Other repositories (like RetailerRepository) will follow the same pattern but focus on their respective entities.
+
+* **In-Memory Implementation:**<br/>
+In-memory storage is fast and easy to implement. We don’t need an external database for now, and it allows for quick testing of CRUD functionality.
+It’s also ideal for unit testing, since it doesn’t rely on any external dependencies.
+
+* **Abstraction with Factory Pattern:**<br/>
+The Factory Pattern allows easy switching between different repository implementations without modifying other parts of the codebase. 
+We can swap out the in-memory store with other storage options (like a database or file system) without changing the business logic.
+
+* **Future-Proofing for Other Backends:**<br/>
+We are future-proofing by designing the system to easily switch storage backends. Adding a new storage type (e.g., database) will be straightforward. 
+This ensures the application can scale when switching to a more permanent solution like a database.
