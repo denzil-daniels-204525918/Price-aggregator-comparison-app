@@ -5,7 +5,6 @@ from src.main.repositories.inmemory.inmemory_price_alert_repository import InMem
 @pytest.fixture
 def repository():
     return InMemoryPriceAlertRepository()
-
 @pytest.fixture
 def sample_alert():
     return PriceAlert(alert_id="a1", price_threshold=10.00)
