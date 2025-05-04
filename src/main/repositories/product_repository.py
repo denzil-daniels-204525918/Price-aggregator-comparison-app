@@ -20,3 +20,8 @@ class ProductRepository(ABC):
     @abstractmethod
     def delete(self, id: str) -> None:
         pass
+
+    @abstractmethod
+    def update(self, product_id: str, product: Product) -> Product:
+        """Update a product by its ID."""
+        pass
