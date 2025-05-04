@@ -8,11 +8,11 @@ class Product:
         self.category = category
         self.description = description
 
-# src/main/product.py
 from pydantic import BaseModel
 
 class Product(BaseModel):
     product_id: str
     name: str
-    description: str
+    price: float  # ✅ this line is essential
     category: str
+    description: str
