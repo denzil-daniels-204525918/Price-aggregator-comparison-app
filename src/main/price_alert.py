@@ -16,3 +16,13 @@ class PriceAlert:
         return f"Price Alert ID: {self.alert_id}, Threshold: {self.price_threshold}, Active: {self.is_active}"
 
 
+# src/main/price.py
+from pydantic import BaseModel
+
+class Price(BaseModel):
+    price_id: str
+    product_id: str
+    retailer_id: str
+    amount: float
+    currency: str
+    date: str  # ISO format, e.g., "2025-05-04"

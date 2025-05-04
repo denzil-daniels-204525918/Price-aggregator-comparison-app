@@ -83,6 +83,11 @@ Folder structure
     │   └── build.properties
     ├── src
     │   ├── main
+    │   │   ├── api
+    │   │   │   ├── __init__.py
+    │   │   │   ├── retailer_api.py
+    │   │   │   ├── product_api.py
+    │   │   │   └── store_api.py
     │   │   ├── creational_patterns
     │   │   │   ├── abstract_factory
     │   │   │   │   ├── __init__.py
@@ -147,6 +152,7 @@ Folder structure
     │   │   │   ├── test_store_service.py
     │   │   │   └── test_price_service.py
     │   │   ├── __init__.py
+    │   │   ├── app.py
     │   │   ├── price_alert.py
     │   │   ├── product.py
     │   │   ├── promotion.py
@@ -159,6 +165,11 @@ Folder structure
     │   │   ├── store_service.py
     │   │   └── price_service.py
     │   ├── tests
+    │   │   ├── api
+    │   │   │   ├── __init__.py
+    │   │   │   ├── retailer_api.py
+    │   │   │   ├── product_api.py
+    │   │   │   └── store_api.py
     │   │   ├── creational_pattern
     │   │   │   ├── __init__.py
     │   │   │   ├── test_abstract_factory.py

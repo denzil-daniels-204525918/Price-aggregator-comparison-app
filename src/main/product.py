@@ -7,3 +7,12 @@ class Product:
         self.price = price
         self.category = category
         self.description = description
+
+# src/main/product.py
+from pydantic import BaseModel
+
+class Product(BaseModel):
+    product_id: str
+    name: str
+    description: str
+    category: str
