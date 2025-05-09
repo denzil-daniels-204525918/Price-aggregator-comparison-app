@@ -1,20 +1,29 @@
-from typing import Optional, List
-from src.main.price_alert import PriceAlert
-from src.main.repositories.price_alert_repository import PriceAlertRepository
+# src/main/repositories/inmemory/inmemory_price_repository.py
+from typing import Dict, Optional
 
-class InMemoryPriceAlertRepository(PriceAlertRepository):
+class InMemoryPriceRepository:
     def __init__(self):
-        self._storage = {}
+        self.prices: Dict[str, dict] = {}
 
-    def save(self, alert: PriceAlert) -> None:
-        self._storage[alert.alert_id] = alert  # Change 'id' to 'alert_id'
+    def add_price(self, price_data: dict) -> dict:
+        price_id = price_data["price_id"]
+        self.prices[price_id] = price_data
+        return price_data
 
-    def find_by_id(self, id: str) -> Optional[PriceAlert]:
-        return self._storage.get(id)
+    def get_price(self, price_id: str) -> Optional[dict]:
+        return self.prices.get(price_id)
 
-    def find_all(self) -> List[PriceAlert]:
-        return list(self._storage.values())
+    def update_price(self, price_id: str, update_data: dict) -> Optional[dict]:
+        if price_id in self.prices:
+            self.prices[price_id].update(update_data)
+            return self.prices[price_id]
+        return None
 
-    def delete(self, id: str) -> None:
-        if id in self._storage:
-            del self._storage[id]
+    def delete_price(self, price_id: str) -> bool:
+        if price_id in self.prices:
+            del self.prices[price_id]
+            return True
+        return False
+
+    def list_prices(self) -> list:
+        return list(self.prices.values())

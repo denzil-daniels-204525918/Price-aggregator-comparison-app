@@ -83,6 +83,11 @@ Folder structure
     │   └── build.properties
     ├── src
     │   ├── main
+    │   │   ├── api
+    │   │   │   ├── __init__.py
+    │   │   │   ├── retailer_api.py
+    │   │   │   ├── product_api.py
+    │   │   │   └── store_api.py
     │   │   ├── creational_patterns
     │   │   │   ├── abstract_factory
     │   │   │   │   ├── __init__.py
@@ -142,14 +147,29 @@ Folder structure
     │   │   │   ├── retailer_repository.py
     │   │   │   ├── saved_list_repository.py
     │   │   │   └── user_repository.py
+    │   │   ├── services
+    │   │   │   ├── test_product_service.py
+    │   │   │   ├── test_store_service.py
+    │   │   │   └── test_price_service.py
     │   │   ├── __init__.py
+    │   │   ├── app.py
     │   │   ├── price_alert.py
     │   │   ├── product.py
     │   │   ├── promotion.py
     │   │   ├── retailer.py
     │   │   ├── saved_list.py
     │   │   └── user.py
+    │   ├── services
+    │   │   ├── __init__.py
+    │   │   ├── product_service.py
+    │   │   ├── store_service.py
+    │   │   └── price_service.py
     │   ├── tests
+    │   │   ├── api
+    │   │   │   ├── __init__.py
+    │   │   │   ├── retailer_api.py
+    │   │   │   ├── product_api.py
+    │   │   │   └── store_api.py
     │   │   ├── creational_pattern
     │   │   │   ├── __init__.py
     │   │   │   ├── test_abstract_factory.py
@@ -160,6 +180,15 @@ Folder structure
     │   │   │   └── test_singleton.py
     │   │   ├── factory
     │   │   │   └── test_repository_factory.py
+    │   │   ├── inmemory
+    │   │   │   ├── __init__.py
+    │   │   │   ├── test_inmemory_price_alert_repository.py
+    │   │   │   ├── test_inmemory_product_repository.py
+    │   │   │   ├── test_inmemory_promotion_repository.py
+    │   │   │   ├── test_inmemory_repository.py
+    │   │   │   ├── test_inmemory_retailer_repository.py
+    │   │   │   ├── test_inmemory_saved_list_repository.py
+    │   │   │   └── test_inmemory_user_repository.py
     │   │   ├── __init__.py
     │   │   ├── _test_inmemory_price_alert_repository.py
     │   │   ├── _test_inmemory_product_repository.py
