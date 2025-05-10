@@ -5,6 +5,12 @@ on:
     branches: [ "**" ]
   pull_request:
     branches: [ "main" ]
+    
+- name: src/tests
+  run: |
+    export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+    source .venv/bin/activate
+    pytest
 
 jobs:
   test:
