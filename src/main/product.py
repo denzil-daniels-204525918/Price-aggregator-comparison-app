@@ -1,18 +1,13 @@
-# src/main/product.py
-
-class Product:
-    def __init__(self, product_id, name, price, category, description=""):
-        self.product_id = product_id
-        self.name = name
-        self.price = price
-        self.category = category
-        self.description = description
-
 from pydantic import BaseModel
+from typing import Optional
+import copy
 
 class Product(BaseModel):
     product_id: str
     name: str
-    price: float  # ✅ this line is essential
-    category: str
-    description: str
+    price: float
+    description: Optional[str] = None
+    category: Optional[str] = None
+
+    def clone(self):
+        return copy.deepcopy(self)

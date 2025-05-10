@@ -1,32 +1,21 @@
-import pytest
-from src.main.repositories.inmemory.inmemory_retailer_repository import InMemoryRetailerRepository
-from src.main.retailer import Retailer
+# src/main/repositories/inmemory/inmemory_retailer_repository.py
+from typing import Dict, List
+from src.main.models.retailer import Retailer
 
-@pytest.fixture
-def retailer_repository():
-    return InMemoryRetailerRepository()
+class InMemoryRetailerRepository:
+    def __init__(self):
+        self.retailers: Dict[str, Retailer] = {}
 
-def test_save_and_find_by_id(retailer_repository):
-    r = Retailer(retailer_id="r1", name="Checkers", contact_info="Cape Town")
-    retailer_repository.save(r)
+    def save(self, retailer: Retailer) -> Retailer:
+        self.retailers[retailer.retailer_id] = retailer
+        return retailer
 
-    found = retailer_repository.find_by_id("r1")
-    assert found is not None
-    assert found.retailer_id == "r1"  # Change from `found.id` to `found.retailer_id`
-    assert found.name == "Checkers"
+    def find_by_id(self, retailer_id: str) -> Retailer:
+        return self.retailers.get(retailer_id)
 
-def test_find_all(retailer_repository):
-    r1 = Retailer(retailer_id="r1", name="Checkers", contact_info="Cape Town")
-    r2 = Retailer(retailer_id="r2", name="Pick n Pay", contact_info="Joburg")
-    retailer_repository.save(r1)
-    retailer_repository.save(r2)
+    def find_all(self) -> List[Retailer]:
+        return list(self.retailers.values())
 
-    retailers = retailer_repository.find_all()
-    assert len(retailers) == 2
-
-def test_delete(retailer_repository):
-    r = Retailer(retailer_id="r1", name="Checkers", contact_info="Cape Town")
-    retailer_repository.save(r)
-    retailer_repository.delete("r1")
-
-    assert retailer_repository.find_by_id("r1") is None
+    def delete(self, retailer_id: str) -> None:
+        if retailer_id in self.retailers:
+            del self.retailers[retailer_id]

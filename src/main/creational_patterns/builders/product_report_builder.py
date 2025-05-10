@@ -1,5 +1,5 @@
 from main.product import Product
-from src.main.creational_patterns.builder.promotion import Promotion
+from src.main.creational_patterns.builders.promotion import Promotion
 from .price_alert import PriceAlert
 from main.creational_patterns.builder.product_report import ProductReport
 

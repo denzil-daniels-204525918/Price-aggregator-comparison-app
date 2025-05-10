@@ -1,5 +1,10 @@
 # src/main/services/price_service.py
 class PriceService:
+    def __init__(self, price_repository):
+        self.repository = price_repository
+
+    def create_price(self, price_data):
+        return self.repository.create_price(price_data)
     def __init__(self, repository):
         self.repository = repository
 

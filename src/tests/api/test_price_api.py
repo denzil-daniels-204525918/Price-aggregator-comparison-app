@@ -1,7 +1,7 @@
 # src/tests/api/test_price_api.py
 import pytest
 from fastapi.testclient import TestClient
-from main.app import app
+from src.main.app import app
 
 client = TestClient(app)
 

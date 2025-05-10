@@ -298,7 +298,7 @@ Each class was designed with a clear responsibility:
 * User: manages login and logout - [user.py](src/main/user.py)
 * Product: holds product details - [product.py](src/main/product.py)
 * SavedList: allows users to save preferred items - [saved_list.py](src/main/saved_list.py)
-* Retailer: stores information about stores and available products - [retailer.py](src/main/retailer.py)
+* Retailer: stores information about stores and available products - [retailer.py](src/main/models/retailer.py)
 * Promotion: handles discount logic - [promotion.py](src/main/promotion.py)
 * PriceAlert: notifies users when price thresholds are met - [price_alert.py](src/main/price_alert.py)
 
@@ -316,7 +316,7 @@ Each class was designed with a clear responsibility:
 | Simple Factory         | Encapsulates object creation logic for product types in a single factory class.  | ProductFactory creates Product objects based on type like "grocery" or "electronics". |[simple_factory](src/main/creational_patterns/simple_factory)|
 | Factory Method         | Delegates object creation to subclasses based on input or context.                | DataSourceFactory returns specific data sources like PicknPaySource, CheckersSource.  |[factory_method](src/main/creational_patterns/factory_method) |
 | Abstract Factory       | Creates related objects (product, promotion, alert) without specifying classes.   | RetailerAFactory creates a Product, Promotion, and PriceAlert for a retailer.         |[abstract_factory](src/main/creational_patterns/abstract_factory) |
-| Builder                | Constructs complex objects step-by-step, useful when object has many parts.       | ProductReportBuilder builds a report with product, price history, promo, and alert.   |[builder](src/main/creational_patterns/builder) |
+| Builder                | Constructs complex objects step-by-step, useful when object has many parts.       | ProductReportBuilder builds a report with product, price history, promo, and alert.   |[builder](src/main/creational_patterns/builders) |
 | Prototype              | Creates object copies using cloning, to replicate existing templates.             | milk_template.clone() creates a copy of a pre-defined Product template.               |[prototype](src/main/creational_patterns/prototype) |
 | Singleton              | Ensures only one instance of a class exists globally throughout the app.          | DatabaseConnection maintains a single database connection shared across the app.      |[singleton](src/main/creational_patterns/singleton) |
 
