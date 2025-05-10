@@ -1,42 +1,46 @@
-name: CI Pipeline for Python  
+name: CI/CD
 
 on:
   push:
-    branches: [ "**" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-    
-- name: src/tests
-  run: |
-    export PYTHONPATH=$PYTHONPATH:$(pwd)/src
-    source .venv/bin/activate
-    pytest
 
 jobs:
-  test:
+  build-and-release:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout source code
-      uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.13'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
 
-    - name: Install dependencies
-      run: |
-        python -m venv .venv
-        source .venv/bin/activate
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install build pytest
 
-    - name: Check if pytest is installed
-      run: |
-        source .venv/bin/activate
-        pip show pytest
+      - name: Run Tests
+        env:
+          PYTHONPATH: "${{ github.workspace }}/src/main"
+        run: |
+          source .venv/bin/activate
+          pytest
 
-    - name: Run tests
-      run: |
-        source .venv/bin/activate
-        pytest --maxfail=1 --disable-warnings -v
+      - name: Build Python Package
+        run: |
+          source .venv/bin/activate
+          python -m build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: price-aggregator-wheel
+          path: dist/*.whl
