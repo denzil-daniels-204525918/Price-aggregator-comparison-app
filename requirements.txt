@@ -1,2 +1,3 @@
 fastapi
 pydantic
+pytest>=7.0.0
