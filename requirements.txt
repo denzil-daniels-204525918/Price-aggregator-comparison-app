@@ -1,3 +1,4 @@
-fastapi
-pydantic
+fastapi>=0.115.12
+pydantic>=2.11.4
+httpx>=0.23.0
 pytest>=7.0.0
