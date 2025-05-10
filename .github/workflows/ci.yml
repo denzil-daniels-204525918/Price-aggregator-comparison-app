@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: CI Pipeline for Python
 
 on:
   push:
@@ -17,12 +17,20 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: "3.13"
+        python-version: '3.13'
 
-    - name: Install dependencies and run tests
+    - name: Install dependencies
       run: |
         python -m venv .venv
         source .venv/bin/activate
-        pip install --upgrade pip
         pip install -r requirements.txt
-        pytest src/tests --maxfail=1 --disable-warnings -v
+
+    - name: Check if pytest is installed
+      run: |
+        source .venv/bin/activate
+        pip show pytest
+
+    - name: Run tests
+      run: |
+        source .venv/bin/activate
+        pytest --maxfail=1 --disable-warnings -v
