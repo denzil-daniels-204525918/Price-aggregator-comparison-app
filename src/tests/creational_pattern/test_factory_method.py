@@ -1,7 +1,11 @@
-import pytest
-from main.creational_patterns.factory_method.data_source_factory import DataSourceFactory
-from main.creational_patterns.factory_method.picknpay_data_source import PicknPayDataSource
-from main.creational_patterns.factory_method.checkers_data_source import CheckersDataSource
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), "../../../main"))
+
+from creational_patterns.factory_method.data_source_factory import DataSourceFactory
+from creational_patterns.factory_method.picknpay_data_source import PicknPayDataSource
+from creational_patterns.factory_method.checkers_data_source import CheckersDataSource
+
 
 def test_get_picknpay_data_source():
     factory = DataSourceFactory()
