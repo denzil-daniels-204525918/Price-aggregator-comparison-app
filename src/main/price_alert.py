@@ -26,3 +26,16 @@ class Price(BaseModel):
     amount: float
     currency: str
     date: str  # ISO format, e.g., "2025-05-04"
+    alert_id: str
+    price_threshold: float
+    # Add other fields as needed
+
+    # src/main/price.py
+from pydantic import BaseModel
+
+class Price(BaseModel):
+    price_id: str
+    amount: float
+    currency: str
+    date: str
+    # Add other fields as needed

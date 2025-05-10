@@ -50,7 +50,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-from main.creational_patterns.builder.product_report_builder import ProductReportBuilder
+from main.creational_patterns.builders.product_report_builder import ProductReportBuilder
 from main.product import Product
 from main.promotion import Promotion
 from src.main.price_alert import PriceAlert

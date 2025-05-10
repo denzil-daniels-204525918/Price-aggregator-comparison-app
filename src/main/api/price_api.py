@@ -1,8 +1,7 @@
-# src/main/api/price_api.py
 from fastapi import APIRouter, HTTPException, Query
-from main.repositories.inmemory.inmemory_price_alert_repository import InMemoryPriceRepository
-from main.services.price_service import PriceService
-from main.price_alert import Price
+from src.main.repositories.inmemory.inmemory_price_alert_repository import InMemoryPriceRepository
+from src.main.services.price_service import PriceService
+from src.main.price_alert import Price
 
 price_repository = InMemoryPriceRepository()
 price_service = PriceService(price_repository)
@@ -23,10 +22,10 @@ def get_price(price_id: str):
 
 @router.put("/prices/{price_id}")
 def update_price(
-    price_id: str,
-    amount: float = Query(...),
-    currency: str = Query(...),
-    date: str = Query(...)
+        price_id: str,
+        amount: float = Query(...),
+        currency: str = Query(...),
+        date: str = Query(...)
 ):
     updated = price_service.update_price(price_id, {
         "amount": amount,

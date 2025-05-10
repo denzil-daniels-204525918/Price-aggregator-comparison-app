@@ -1,29 +1,26 @@
-# src/main/repositories/inmemory/inmemory_product_repository.py
-from typing import Dict, Optional
+from typing import Optional, List
+from src.main.product import Product  # Add this import
 
 class InMemoryProductRepository:
     def __init__(self):
-        self.products: Dict[str, dict] = {}
+        self.storage = {}
 
-    def add_product(self, product_data: dict) -> dict:
-        product_id = product_data["product_id"]
-        self.products[product_id] = product_data
-        return product_data
+    def save(self, product: Product) -> Product:
+        self.storage[product.product_id] = product
+        return product
 
-    def get_product(self, product_id: str) -> Optional[dict]:
-        return self.products.get(product_id)
+    def find_by_id(self, product_id: str) -> Optional[Product]:
+        return self.storage.get(product_id)
 
-    def update_product(self, product_id: str, update_data: dict) -> Optional[dict]:
-        if product_id in self.products:
-            self.products[product_id].update(update_data)
-            return self.products[product_id]
-        return None
+    def find_all(self) -> List[Product]:
+        return list(self.storage.values())
 
-    def delete_product(self, product_id: str) -> bool:
-        if product_id in self.products:
-            del self.products[product_id]
+    def delete(self, product_id: str) -> bool:
+        if product_id in self.storage:
+            del self.storage[product_id]
             return True
         return False
 
-    def list_products(self) -> list:
-        return list(self.products.values())
+    def update(self, product: Product) -> Product:
+        self.storage[product.product_id] = product
+        return product

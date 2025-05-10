@@ -1,5 +1,5 @@
 import unittest
-from src.main.retailer import Retailer
+from src.main.models.retailer import Retailer
 from src.main.product import Product
 
 class TestRetailer(unittest.TestCase):

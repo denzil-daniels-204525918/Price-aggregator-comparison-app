@@ -1,11 +1,15 @@
-# src/main/promotion.py
+from pydantic import BaseModel, field_validator
+from typing import Optional
 
-class Promotion:
-    def __init__(self, promotion_id: str, title: str, description: str, discount_percentage: float):
-        self.promotion_id = promotion_id
-        self.title = title
-        self.description = description
-        self.discount_percentage = discount_percentage
+class Promotion(BaseModel):
+    promotion_id: str
+    title: str
+    description: str
+    discount_percentage: float
+    duration_days: int
 
-    def apply_discount(self, price: float) -> float:
-        return price * (1 - self.discount_percentage / 100)
+    @field_validator('discount_percentage')
+    def validate_discount(cls, v):
+        if not 0 <= v <= 100:
+            raise ValueError('Discount must be between 0 and 100')
+        return v

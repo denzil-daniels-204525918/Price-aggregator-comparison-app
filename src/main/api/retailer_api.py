@@ -1,8 +1,7 @@
-# src/main/api/retailer_api.py
 from fastapi import APIRouter, HTTPException, Query
-from main.repositories.inmemory.inmemory_retailer_repository import InMemoryRetailerRepository
-from main.services.retailer_service import RetailerService
-from main.retailer import Retailer
+from src.main.repositories.inmemory.inmemory_retailer_repository import InMemoryRetailerRepository
+from src.main.services.retailer_service import RetailerService
+from src.main.models.retailer import Retailer
 
 retailer_repository = InMemoryRetailerRepository()
 retailer_service = RetailerService(retailer_repository)
@@ -22,8 +21,11 @@ async def create_retailer(retailer: Retailer):
     return created_retailer
 
 @router.put("/retailers/{retailer_id}/contact")
-def update_contact_info(retailer_id: str, contact_info: str = Query(...)):
-    updated = retailer_service.update_contact_info(retailer_id, contact_info)
+def update_contact_info(
+        retailer_id: str,
+        new_contact: str = Query(..., alias="new_contact")
+):
+    updated = retailer_service.update_contact_info(retailer_id, new_contact)
     if not updated:
         raise HTTPException(status_code=404, detail="Retailer not found")
     return updated

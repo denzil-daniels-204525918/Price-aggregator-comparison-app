@@ -1,9 +1,10 @@
 # src/tests/api/test_product_api.py
 import pytest
 from fastapi.testclient import TestClient
-from main.app import app
+from src.main.app import app
 
 client = TestClient(app)
+
 
 @pytest.fixture(scope="function")
 def create_product():
@@ -11,7 +12,8 @@ def create_product():
         "product_id": "P123",
         "name": "Test Product",
         "description": "Test Description",
-        "category": "Test Category"
+        "category": "Test Category",
+        "price": 10.99  # Added required field
     }
     response = client.post("/products", json=product)
     assert response.status_code == 200
