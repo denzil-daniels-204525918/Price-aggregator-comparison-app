@@ -1,4 +1,4 @@
-name: Python application
+name: CI/CD
 
 on:
   push:
@@ -7,16 +7,17 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-release:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.13"
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -24,11 +25,22 @@ jobs:
           source .venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest
+          pip install build pytest
 
-      - name: Run tests
+      - name: Run Tests
         env:
           PYTHONPATH: "${{ github.workspace }}/src/main"
         run: |
           source .venv/bin/activate
           pytest
+
+      - name: Build Python Package
+        run: |
+          source .venv/bin/activate
+          python -m build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: price-aggregator-wheel
+          path: dist/*.whl
