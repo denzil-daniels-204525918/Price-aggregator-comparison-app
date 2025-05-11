@@ -1,0 +1,39 @@
+name: PR Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test_and_lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Run Pytest
+      run: |
+        source venv/bin/activate
+        pytest
+
+    - name: Lint with flake8
+      run: |
+        source venv/bin/activate
+        flake8 src
+
+    - name: Format with black
+      run: |
+        source venv/bin/activate
+        black --check src
