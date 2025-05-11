@@ -1,46 +1,33 @@
-name: CI/CD
+name: Python CI/CD
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: '3.10'
 
-      - name: Install dependencies
+      - name: Install build module
         run: |
-          python -m venv .venv
-          source .venv/bin/activate
-          pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install build pytest
+          python -m pip install --upgrade pip
+          pip install build
 
-      - name: Run Tests
-        env:
-          PYTHONPATH: "${{ github.workspace }}/src/main"
-        run: |
-          source .venv/bin/activate
-          pytest
+      - name: Build wheel package
+        run: python -m build
 
-      - name: Build Python Package
-        run: |
-          source .venv/bin/activate
-          python -m build
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v3
         with:
-          name: price-aggregator-wheel
+          name: python-wheel
           path: dist/*.whl
