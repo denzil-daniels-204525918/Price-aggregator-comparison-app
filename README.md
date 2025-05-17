@@ -1,4 +1,5 @@
-# Price aggregator comparison app
+# Price aggregator comparison app [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 
 ### A pricing aggregator and comparison application that aims to consolidate information from major grocery stores, allowing users find the best deals on food and beverages in a central location.
 
