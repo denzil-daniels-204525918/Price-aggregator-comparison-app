@@ -4,6 +4,13 @@ Thank you for considering contributing to the Price Content Aggregator! 🎉
 This project is built to help consumers make smarter grocery decisions by comparing prices across stores in South Africa. Your help makes it better!
 
 ---
+## Contributing
+1. Fork this repository.
+2. Pick an issue labeled `good-first-issue`.
+3. Write code and tests.
+4. Submit a PR with a clear description.
+
+---
 
 ## 📦 Project Setup
 
