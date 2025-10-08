@@ -9,157 +9,34 @@ This document presents UML activity diagrams for key workflows in the system. Ea
 
 ---
 
-* ✅ [User Registration](user_account.md) – Creating an account. 
-* ✅ [User Login & Authentication](user_account.md) – Secure access.
-* ✅ [Search for a Product](product.md) – Finding grocery items.
-* ✅ [Filter & Sort Prices](user_account.md) – Customizing search results.
-* ✅ [Save a Shopping List](user_account.md) – Organizing favorite items.
-* ✅ [Share a Shopping List](user_account.md) – Sending lists to others.
-* ✅ [Set Price Alerts](price_alert.md) – Notifying users of price drops.
-* ✅ [Retailer Price Updates](retailer_profile.md) – Ensuring accurate data.
+## 📋 Available Activity Diagrams
 
----
-# Activity Workflow Modeling
+* ✅ [User Registration & Authentication](user_account.md) – Account creation and secure access
+* ✅ [Product Search](product.md) – Finding grocery items efficiently
+* ✅ [Price Alert Management](price_alert.md) – Setting up price drop notifications
+* ✅ [Retailer Price Updates](retailer_profile.md) – Ensuring accurate pricing data
 
-## 1. User Registration
+## 🎯 Key Workflows Modeled
 
-```mermaid
-graph TD;
-    A[Start] --> B[Enter User Details];
-    B --> C[Validate Input];
-    C -->|Valid| D[Create Account];
-    C -->|Invalid| E[Show Error Message];
-    D --> F[Send Confirmation Email];
-    F --> G[User Verifies Email];
-    G --> H[Account Activated];
-    H --> I[End];
-```
+### User-Facing Workflows
+- **User Registration**: Creating and verifying new accounts
+- **Product Discovery**: Searching and filtering products
+- **Price Monitoring**: Setting up and managing price alerts
+- **List Management**: Saving and sharing shopping lists
 
-### Explanation:
-- Ensures users enter valid information before creating an account.
-- Confirmation email step adds security and prevents fake accounts.
+### Retailer-Facing Workflows
+- **Price Updates**: Retailer dashboard access and price modifications
+- **Product Management**: Adding and updating product information
+
+## 🔄 Workflow Integration
+
+These activity diagrams ensure:
+- **Smooth user interactions** across all system features
+- **Real-time data updates** for accurate pricing information
+- **Secure authentication** processes for all user types
+- **Efficient system operations** for both users and retailers
 
 ---
 
-## 2. User Login & Authentication
-
-```mermaid
-graph TD;
-    A[Start] --> B[Enter Username & Password];
-    B --> C[Validate Credentials];
-    C -->|Valid| D[Grant Access];
-    C -->|Invalid| E[Show Error Message];
-    D --> F[End];
-```
-
-### Explanation:
-- Basic authentication ensures secure access.
-- Error handling prevents unauthorized access.
-
----
-
-## 3. Search for a Product
-
-```mermaid
-graph TD;
-    A[Start] --> B[User Enters Search Query];
-    B --> C[Fetch Matching Products];
-    C --> D[Display Results];
-    D --> E[End];
-```
-
-### Explanation:
-- Ensures users can find items efficiently.
-- Fetches data dynamically for real-time updates.
-
----
-
-## 4. Filter & Sort Prices
-
-```mermaid
-graph TD;
-    A[Start] --> B[User Applies Filters];
-    B --> C[Sort by Price, Retailer, Rating];
-    C --> D[Update Results];
-    D --> E[End];
-```
-
-### Explanation:
-- Enhances usability by allowing filtering options.
-- Sorting improves decision-making.
-
----
-
-## 5. Save a Shopping List
-
-```mermaid
-graph TD;
-    A[Start] --> B[User Selects Items];
-    B --> C[Click Save List];
-    C --> D[Store List in User Profile];
-    D --> E[End];
-```
-
-### Explanation:
-- Allows users to track preferred products.
-- Saves data for future reference.
-
----
-
-## 6. Share a Shopping List
-
-```mermaid
-graph TD;
-    A[Start] --> B[User Selects Saved List];
-    B --> C[Click Share];
-    C --> D[Generate Shareable Link];
-    D --> E[Send via Email/Social Media];
-    E --> F[End];
-```
-
-### Explanation:
-- Helps users collaborate on grocery shopping.
-- Shareable links make distribution seamless.
-
----
-
-## 7. Set Price Alerts
-
-```mermaid
-graph TD;
-    A[Start] --> B[User Selects Product];
-    B --> C[Click 'Set Price Alert'];
-    C --> D[User Defines Target Price];
-    D --> E[System Monitors Prices];
-    E -->|Price Drops| F[Send Notification];
-    F --> G[End];
-```
-
-### Explanation:
-- Helps users get notified of deals.
-- Automates price tracking for convenience.
-
----
-
-## 8. Retailer Price Updates
-
-```mermaid
-graph TD;
-    A[Start] --> B[Retailer Logs In];
-    B --> C[Navigate to Dashboard];
-    C --> D[Update Product Prices];
-    D --> E[Changes Reflected in System];
-    E --> F[End];
-```
-
-### Explanation:
-- Ensures accurate price updates from retailers.
-- Keeps system data fresh and relevant.
-
----
-
-These workflows align with the system’s functional requirements and use cases by ensuring **smooth user interactions, real-time updates, and a seamless shopping experience**.
-
----
-
-* [Back to README.md](../../../README.md)
+* [Back to Diagrams Overview](../Traceability%20Matrix.md)
+* [Back to README](../../README.md)

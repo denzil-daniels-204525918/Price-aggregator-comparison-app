@@ -13,3 +13,22 @@ This document explains why branch protection is enforced in this repository.
 3. **No Direct Pushes** – All changes must go through a PR.
 
 🚀 **Result:** A stable, reliable `main` branch with fewer production issues!  
+
+# .github/branch-protection-rules.yml
+rules:
+- name: Main Branch Protection
+  branches: [main]
+  required_status_checks:
+  strict: true
+  contexts:
+  - test
+  - security-scan
+  - build
+  required_pull_request_reviews:
+  required_approving_review_count: 1
+  dismiss_stale_reviews: true
+  require_code_owner_reviews: false
+  restrictions: null
+  enforce_admins: false
+  allow_force_pushes: false
+  allow_deletions: false

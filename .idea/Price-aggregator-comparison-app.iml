@@ -2,7 +2,7 @@
 <module type="EMPTY_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Python" name="Python facet">
-      <configuration sdkName="Python 3.13 (Price-aggregator-comparison-app)" />
+      <configuration sdkName="Python 3.13 virtualenv at ~/Price-aggregator-comparison-app/.venv" />
     </facet>
   </component>
   <component name="NewModuleRootManager">
@@ -12,6 +12,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Python 3.13 (Price-aggregator-comparison-app) interpreter library" level="application" />
+    <orderEntry type="library" name="Python 3.13 virtualenv at ~/Price-aggregator-comparison-app/.venv interpreter library" level="application" />
   </component>
 </module>
