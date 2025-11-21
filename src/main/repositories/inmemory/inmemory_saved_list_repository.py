@@ -1,8 +1,8 @@
 # src/main/repositories/inmemory/inmemory_saved_list_repository.py
 
-from src.main.repositories.repository import Repository
+from price_aggregator.main.repositories.repository import Repository
 from typing import List, Optional
-from src.main.saved_list import SavedList  # Assuming this exists
+from price_aggregator.main.models.saved_list import SavedList  # Assuming this exists
 
 class InMemorySavedListRepository(Repository[SavedList, str]):
     def __init__(self):

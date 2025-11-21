@@ -1,8 +1,8 @@
 # src/main/repositories/inmemory/inmemory_user_repository.py
 
-from src.main.repositories.repository import Repository
+from price_aggregator.main.repositories.repository import Repository
 from typing import List, Optional
-from src.main.user import User  # Assuming a User class exists with at least an `id` field
+from price_aggregator.main.models.user import User  # Assuming a User class exists with at least an `id` field
 
 class InMemoryUserRepository(Repository[User, str]):
     def __init__(self):

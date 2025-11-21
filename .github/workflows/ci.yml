@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ published ]
+
+env:
+  PYTHON_VERSION: '3.11'
+  VENV_NAME: '.venv'
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+=======
 name: Python CI/CD
 
 on:
@@ -12,10 +36,136 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+>>>>>>> 7623d6094a56a952ccafdde3660f8390f3cc8db0
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
+<<<<<<< HEAD
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: Create Virtual Environment
+        run: |
+          python -m venv ${{ env.VENV_NAME }}
+          echo "${{ env.VENV_NAME }}/bin" >> $GITHUB_PATH
+
+      - name: Install Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-cov build
+
+      - name: Run Tests with Coverage
+        env:
+          PYTHONPATH: '${{ github.workspace }}/src'
+        run: |
+          pytest --cov=src --cov-report=xml --cov-report=html
+
+      - name: Upload Coverage Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: |
+            htmlcov/
+            coverage.xml
+          retention-days: 30
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Security Scanner
+        run: |
+          pip install bandit safety
+
+      - name: Run Bandit Security Scan
+        run: |
+          bandit -r src/ -f html -o bandit-report.html || true
+
+      - name: Run Safety Check
+        run: |
+          safety check --json --output safety-report.json || true
+
+      - name: Upload Security Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-reports
+          path: |
+            bandit-report.html
+            safety-report.json
+          retention-days: 30
+
+  build:
+    name: Build Package
+    runs-on: ubuntu-latest
+    needs: [test, security-scan]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Build Dependencies
+        run: |
+          pip install build twine
+
+      - name: Build Package
+        run: |
+          python -m build
+
+      - name: Verify Package
+        run: |
+          pip install twine
+          twine check dist/*
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package
+          path: |
+            dist/
+            *.egg-info/
+          retention-days: 30
+
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'release' && github.event.action == 'published'
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package
+          path: dist/
+
+      - name: Publish to PyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          pip install twine
+          twine upload dist/*
+=======
           python-version: '3.10'
 
       - name: Install build module
@@ -31,3 +181,4 @@ jobs:
         with:
           name: python-wheel
           path: dist/*.whl
+>>>>>>> 7623d6094a56a952ccafdde3660f8390f3cc8db0

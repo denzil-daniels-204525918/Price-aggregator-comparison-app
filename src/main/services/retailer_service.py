@@ -1,6 +1,7 @@
+# --- src/main/services/retailer_service.py ---
 from typing import Optional, List
-from src.main.models.retailer import Retailer
-from src.main.repositories.inmemory.inmemory_retailer_repository import InMemoryRetailerRepository
+from price_aggregator.main.models.retailer import Retailer
+from price_aggregator.main.repositories.inmemory.inmemory_retailer_repository import InMemoryRetailerRepository
 
 class RetailerService:
     def __init__(self, repository: Optional[InMemoryRetailerRepository] = None):

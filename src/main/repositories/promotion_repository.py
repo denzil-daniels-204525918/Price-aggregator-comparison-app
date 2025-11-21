@@ -2,7 +2,7 @@
 
 from abc import ABC, abstractmethod
 from typing import List
-from src.main.promotion import Promotion
+from price_aggregator.main.models.promotion import Promotion
 
 class PromotionRepository(ABC):
 

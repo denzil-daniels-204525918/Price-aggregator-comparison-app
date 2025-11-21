@@ -1,5 +1,5 @@
 from typing import Optional, List
-from src.main.product import Product  # Add this import
+from price_aggregator.main.models.product import Product  # Add this import
 
 class InMemoryProductRepository:
     def __init__(self):

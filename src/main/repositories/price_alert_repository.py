@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Generic, TypeVar, Optional, List
-from src.main.price_alert import PriceAlert
+from price_aggregator.main.models.price_alert import PriceAlert
 
 
 T = TypeVar('T')

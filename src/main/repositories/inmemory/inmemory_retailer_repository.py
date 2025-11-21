@@ -1,5 +1,5 @@
 from typing import Dict, Optional, List
-from src.main.models.retailer import Retailer
+from price_aggregator.main.models.retailer import Retailer
 
 class InMemoryRetailerRepository:
     def __init__(self):

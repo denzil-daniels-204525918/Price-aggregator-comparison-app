@@ -89,187 +89,135 @@ Follow the steps below to run the project locally:
 ---
 
 Folder structure
-
-    ├── docs
-    │   ├── agile_planning
-    │   │   ├── agile_planning_document.md
-    │   │   ├── backlog.md
-    │   │   ├── reflection.md
-    │   │   ├── sprint_planning.md
-    │   │   └── user_stories.md
-    │   ├── diagrams
-    │   │   ├── activity_diagrams
-    │   │   │   ├── activity_diagrams.md
-    │   │   │   ├── price_alert.md
-    │   │   │   ├── product.md
-    │   │   │   ├── retailer_profile.md
-    │   │   │   └── user_account.md
-    │   │   ├── state_transition_diagrams
-    │   │   │   ├── price_alert.md
-    │   │   │   ├── product.md
-    │   │   │   ├── retailer_profile.md
-    │   │   │   ├── state_transition_diagrams.md
-    │   │   │   └── user_account.md
-    │   │   ├── reflection.md
-    │   │   ├── Traceability Matrix.md
-    │   ├── domain_model
-    │   │   ├── class_diagram.js
-    │   │   ├── class_diagram_updated.js
-    │   │   ├── domain_model_documentation.md
-    │   │   ├── explanation_of_the_class_diagram.md
-    │   │   └── reflection.md
-    │   ├── kanban
-    │   │   ├── index.md
-    │   │   ├── kanban_board.md
-    │   │   ├── kanban_explanation.md
-    │   │   ├── reflection.md
-    │   │   └── template_analysis.md
-    │   ├── specification
-    │   │   ├── architecture.md
-    │   │   ├── reflection.md
-    │   │   ├── specification.md
-    │   │   ├── stakeholder_analysis.md
-    │   │   └── system_requirements_document.md
-    │   ├── test_use_case_documentation
-    │   │   ├── reflection.md
-    │   │   ├── test_case_development.md
-    │   │   ├── test_use_case_documentation.md
-    │   │   ├── use_case_diagrams.md
-    │   │   └── use_case_specifications.md
-    │   ├── notes.md
-    ├── project
-    │   └── build.properties
-    ├── src
-    │   ├── main
-    │   │   ├── api
-    │   │   │   ├── __init__.py
-    │   │   │   ├── retailer_api.py
-    │   │   │   ├── product_api.py
-    │   │   │   └── store_api.py
-    │   │   ├── creational_patterns
-    │   │   │   ├── abstract_factory
-    │   │   │   │   ├── __init__.py
-    │   │   │   │   ├── price_alert.py
-    │   │   │   │   ├── product.py
-    │   │   │   │   ├── promotion.py
-    │   │   │   │   ├── retailer_a_factory.py
-    │   │   │   │   └── retailer_data_factory.py
-    │   │   │   ├── builder
-    │   │   │   │   ├── __init__.py
-    │   │   │   │   ├── price_alert.py
-    │   │   │   │   ├── product_report.py
-    │   │   │   │   ├── product_report_builder.py
-    │   │   │   │   └── promotion.py
-    │   │   │   ├── factory_method
-    │   │   │   │   ├── __init__.py
-    │   │   │   │   ├── checkers_data_source.py
-    │   │   │   │   ├── data_source.py
-    │   │   │   │   ├── data_source_factory.py
-    │   │   │   │   └── picknpay_data_source.py
-    │   │   │   ├── prototype
-    │   │   │   │   ├── __init__.py
-    │   │   │   │   ├── clone_example.py
-    │   │   │   │   └── clone_method.py
-    │   │   │   ├── simple_factory
-    │   │   │   │   ├── __init__.py
-    │   │   │   │   └── product_factory.py
-    │   │   │   └── singleton
-    │   │   │       ├── __init__.py
-    │   │   │       ├── database_connection.py
-    │   │   │       └── database_connection_example.py
-    │   │   ├── factories
-    │   │   │   └── reposaitory_factory.py
-    │   │   ├── module
-    │   │   │   ├── __init__.py
-    │   │   │   ├── module_saved_list.py
-    │   │   │   └── module_user.py
-    │   │   ├── repositories
-    │   │   │   ├── inmemory
-    │   │   │   │   ├── __init__.py
-    │   │   │   │   ├── inmemory_price_alert_repository.py
-    │   │   │   │   ├── inmemory_product_repository.py
-    │   │   │   │   ├── inmemory_promotion_repository.py
-    │   │   │   │   ├── inmemory_retailer_repository.py
-    │   │   │   │   ├── inmemory_saved_list_repository.py
-    │   │   │   │   └── inmemory_user_repository.py
-    │   │   │   ├── promotion
-    │   │   │   │   ├── __init__.py
-    │   │   │   │   ├── database_promotion_repository.py
-    │   │   │   │   ├── filesystem_promotion_repository.py
-    │   │   │   │   └── redis_promotion_repository.py
-    │   │   │   ├── __init__.py
-    │   │   │   ├── price_alert_repository.py
-    │   │   │   ├── product_repository.py
-    │   │   │   ├── promotion_repository.py
-    │   │   │   ├── repository.py
-    │   │   │   ├── retailer_repository.py
-    │   │   │   ├── saved_list_repository.py
-    │   │   │   └── user_repository.py
-    │   │   ├── services
-    │   │   │   ├── test_product_service.py
-    │   │   │   ├── test_store_service.py
-    │   │   │   └── test_price_service.py
-    │   │   ├── __init__.py
-    │   │   ├── app.py
-    │   │   ├── price_alert.py
-    │   │   ├── product.py
-    │   │   ├── promotion.py
-    │   │   ├── retailer.py
-    │   │   ├── saved_list.py
-    │   │   └── user.py
-    │   ├── services
-    │   │   ├── __init__.py
-    │   │   ├── product_service.py
-    │   │   ├── store_service.py
-    │   │   └── price_service.py
-    │   ├── tests
-    │   │   ├── api
-    │   │   │   ├── __init__.py
-    │   │   │   ├── retailer_api.py
-    │   │   │   ├── product_api.py
-    │   │   │   └── store_api.py
-    │   │   ├── creational_pattern
-    │   │   │   ├── __init__.py
-    │   │   │   ├── test_abstract_factory.py
-    │   │   │   ├── test_builder.py
-    │   │   │   ├── test_factory_method.py
-    │   │   │   ├── test_prototype.py
-    │   │   │   ├── test_simple_factory.py
-    │   │   │   └── test_singleton.py
-    │   │   ├── factory
-    │   │   │   └── test_repository_factory.py
-    │   │   ├── inmemory
-    │   │   │   ├── __init__.py
-    │   │   │   ├── test_inmemory_price_alert_repository.py
-    │   │   │   ├── test_inmemory_product_repository.py
-    │   │   │   ├── test_inmemory_promotion_repository.py
-    │   │   │   ├── test_inmemory_repository.py
-    │   │   │   ├── test_inmemory_retailer_repository.py
-    │   │   │   ├── test_inmemory_saved_list_repository.py
-    │   │   │   └── test_inmemory_user_repository.py
-    │   │   ├── __init__.py
-    │   │   ├── _test_inmemory_price_alert_repository.py
-    │   │   ├── _test_inmemory_product_repository.py
-    │   │   ├── _test_inmemory_promotion_repository.py
-    │   │   ├── _test_inmemory_repository.py
-    │   │   ├── _test_inmemory_retailer_repository.py
-    │   │   ├── _test_inmemory_saved_list_repository.py
-    │   │   ├── _test_inmemory_user_repository.py
-    │   │   ├── test_price_alert.py
-    │   │   ├── test_product.py
-    │   │   ├── test_promotion.py
-    │   │   ├── test_promotion_repository.py
-    │   │   ├── test_retailer.py
-    │   │   ├── test_saved_list.py
-    │   │   └── test_user.py
-    │   ├── __init__.py
-    │   └── main.py
-    ├── build.sbt
-    ├── changelog.md
-    ├── gitinore
-    ├── main.src
-    └── README.md
-
+      
+      Price-aggregator-comparison-app/
+         .github/
+         .venv/
+         docs/
+         │
+         ├── agile_planning/
+         │   ├── agile_planning_document.md
+         │   ├── backlog.md
+         │   ├── sprint_planning.md
+         │   └── user_stories.md
+         │
+         ├── CICD_implementation/
+         │   ├── branch_protection_rules.png
+         │   └── protection.md
+         │
+         ├── diagrams/
+         │   ├── activity_diagrams/
+         │   │   ├── activity_diagrams.md
+         │   │   ├── price_alert.md
+         │   │   ├── product.md
+         │   │   ├── retailer_profile.md
+         │   │   └── user_account.md
+         │   ├── state_transition_diagrams/
+         │   │   ├── price_alert.md
+         │   │   ├── product.md
+         │   │   ├── retailer_profile.md
+         │   │   ├── state_transition_diagrams.md
+         │   │   └── user_account.md
+         │   └── Traceability Matrix.md
+         ├── domain_model/
+         │   ├── class_diagram.js
+         │   ├── class_diagram_updated.js
+         │   ├── domain_model_documentation.md
+         │   └── explanation_of_the_class_diagram.md
+         │
+         ├── kanban/
+         │   ├── index.md
+         │   ├── kanban_board.md
+         │   ├── kanban_explanation.md
+         │   ├── template_analysis.md
+         │   └── update 20250504.jpg
+         │
+         ├── specification/
+         │   ├── architecture.md
+         │   ├── specification.md
+         │   ├── stakeholder_analysis.md
+         │   └── system_requirements_document.md
+         │
+         └── test_use_case_documentation/
+             ├── test_case_development.md
+             ├── test_use_case_documentation.md
+             ├── use_case_diagrams.md
+             └── use_case_specifications.md
+      src/
+      │
+      ├── main/
+      │   ├── __init__.py
+      │   ├── run_scraper.py          # Entry point for scraper
+      │   ├── app.py                  # Main orchestrator (optional)
+      │   ├── compare_prices.py       # Optional comparison logic
+      │   ├── requirements.txt
+      │   │
+      │   ├── api/
+      │   │   ├── __init__.py
+      │   │   ├── price_api.py
+      │   │   ├── product_api.py
+      │   │   └── retailer_api.py
+      │   │
+      │   ├── models/
+      │   │   ├── __init__.py
+      │   │   ├── price.py
+      │   │   ├── price_alert.py
+      │   │   ├── product.py
+      │   │   ├── promotion.py
+      │   │   ├── retailer.py
+      │   │   ├── saved_list.py
+      │   │   └── user.py
+      │   │
+      │   ├── repositories/
+      │   │   ├── __init__.py
+      │   │   ├── repository.py
+      │   │   ├── price_alert_repository.py
+      │   │   ├── product_repository.py
+      │   │   ├── promotion_repository.py
+      │   │   ├── retailer_repository.py
+      │   │   ├── saved_list_repository.py
+      │   │   ├── user_repository.py
+      │   │   └── inmemory/
+      │   │       ├── __init__.py
+      │   │       ├── inmemory_price_alert_repository.py
+      │   │       ├── inmemory_product_repository.py
+      │   │       ├── inmemory_promotion_repository.py
+      │   │       ├── inmemory_retailer_repository.py
+      │   │       ├── inmemory_saved_list_repository.py
+      │   │       └── inmemory_user_repository.py
+      │   │
+      │   ├── services/
+      │   │   ├── __init__.py
+      │   │   ├── price_service.py
+      │   │   ├── product_service.py
+      │   │   └── retailer_service.py
+      │   │
+      │   └── factories/
+      │       ├── __init__.py
+      │       └── repository_factory.py
+      │
+      ├── scraper/
+      │   ├── __init__.py
+      │   ├── checkers_scraper.py
+      │   ├── picknpay_scraper.py
+      │   └── woolworths_scraper.py
+      │
+      ├── tests/
+      │   ├── __init__.py
+      │   ├── unit/
+      │   │   ├── __init__.py
+      │   │   ├── test_basic.py
+      │   │   ├── test_product.py
+      │   │   └── test_user.py
+      │   └── integration/
+      │       ├── __init__.py
+      │       └── test_integration.py
+      │
+      .gitignore
+      README.md
+      changelog.md
+      pyproject.toml
+      setup.py
 
 ---
 
@@ -282,10 +230,10 @@ Folder structure
 
 ## Additional Documentation
 
-* Specifications: [Specification](docs/specification/specification)
-* Architecture: [Architecture](docs/specification/architecture)
-* System Requirements Document (SRD): [SRD](docs/specification/system_requirements_document.md)
-* Stakeholder Analysis: [Stakeholder Analysis](docs/specification/stakeholder_analysis.md)
+* Specifications: [specification.md](docs/specification/specification.md)
+* Architecture: [architecture.md](docs/specification/architecture.md)
+* System Requirements Document (SRD):[system_requirements_document.md](docs/specification/system_requirements_document.md)
+* Stakeholder Analysis: [stakeholder_analysis.md](docs/specification/stakeholder_analysis.md)
 
 ---
 
@@ -353,47 +301,18 @@ I chose Python for this project because I have some prior knowledge of the langu
 Modular Design with Single Responsibility Principle (SRP)
 Each class was designed with a clear responsibility:
 
-* User: manages login and logout - [user.py](src/main/user.py)
-* Product: holds product details - [product.py](src/main/product.py)
-* SavedList: allows users to save preferred items - [saved_list.py](src/main/saved_list.py)
+* User: manages login and logout - [user.py](src/main/models/user.py)
+* Product: holds product details - [product.py](src/main/models/product.py)
+* SavedList: allows users to save preferred items - [saved_list.py](src/main/models/saved_list.py)
 * Retailer: stores information about stores and available products - [retailer.py](src/main/models/retailer.py)
-* Promotion: handles discount logic - [promotion.py](src/main/promotion.py)
-* PriceAlert: notifies users when price thresholds are met - [price_alert.py](src/main/price_alert.py)
+* Promotion: handles discount logic - [promotion.py](src/main/models/promotion.py)
+* PriceAlert: notifies users when price thresholds are met - [price_alert.py](src/main/models/price_alert.py)
 
 ---
 
-[**Test cases**](src/tests) 
+[**Test cases**](src/price_aggregator/tests) 
 
 ---
-
-# 🧱 Creational Design Patterns
-
----
-| **Creational Pattern** | **Purpose / Use**                                                                 | **Example in the App**                                                                 | **Location** |
-|------------------------|-----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|-----|
-| Simple Factory         | Encapsulates object creation logic for product types in a single factory class.  | ProductFactory creates Product objects based on type like "grocery" or "electronics". |[simple_factory](src/main/creational_patterns/simple_factory)|
-| Factory Method         | Delegates object creation to subclasses based on input or context.                | DataSourceFactory returns specific data sources like PicknPaySource, CheckersSource.  |[factory_method](src/main/creational_patterns/factory_method) |
-| Abstract Factory       | Creates related objects (product, promotion, alert) without specifying classes.   | RetailerAFactory creates a Product, Promotion, and PriceAlert for a retailer.         |[abstract_factory](src/main/creational_patterns/abstract_factory) |
-| Builder                | Constructs complex objects step-by-step, useful when object has many parts.       | ProductReportBuilder builds a report with product, price history, promo, and alert.   |[builder](src/main/creational_patterns/builders) |
-| Prototype              | Creates object copies using cloning, to replicate existing templates.             | milk_template.clone() creates a copy of a pre-defined Product template.               |[prototype](src/main/creational_patterns/prototype) |
-| Singleton              | Ensures only one instance of a class exists globally throughout the app.          | DatabaseConnection maintains a single database connection shared across the app.      |[singleton](src/main/creational_patterns/singleton) |
-
----
-
-### 💡 Justification
-
-In our content aggregator application, the use of creational patterns helps manage the complexity of object creation across different layers and modules of the system.
-
-* Simple Factory and Factory Method make the app flexible and extensible, allowing us to add new product types or data sources without changing core logic.
-* Abstract Factory ensures that products, promotions, and alerts created for different retailers are consistent and grouped logically.
-* Builder simplifies the construction of complex objects like detailed reports, making the code cleaner and more readable.
-* Prototype enables rapid duplication of predefined objects like template products, which improves efficiency and consistency.
-* Singleton ensures centralized management of shared resources like database connections, avoiding redundancy and potential conflicts.
-
-Together, these patterns promote modularity, scalability, and maintainability, which are essential for a growing application that integrates multiple retailers and serves a wide range of consumer needs.
-
----
-
 
 ### ✅ Running Tests
 

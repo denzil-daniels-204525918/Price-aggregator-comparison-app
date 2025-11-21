@@ -1,5 +1,5 @@
-from src.main.repositories.promotion_repository import PromotionRepository
-from src.main.promotion import Promotion
+from price_aggregator.main.repositories.promotion_repository import PromotionRepository
+from price_aggregator.main.models.promotion import Promotion
 from typing import Dict, List
 
 

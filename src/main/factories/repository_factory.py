@@ -1,7 +1,7 @@
-from src.main.repositories.promotion.filesystem_promotion_repository import FileSystemPromotionRepositoryStub
-from src.main.repositories.promotion.database_promotion_repository import DatabasePromotionRepositoryStub
-from src.main.repositories.promotion.redis_promotion_repository import RedisPromotionRepositoryStub
-from src.main.repositories.promotion_repository import PromotionRepository
+from price_aggregator.main.repositories.promotion.filesystem_promotion_repository import FileSystemPromotionRepositoryStub
+from price_aggregator.main.repositories.promotion.database_promotion_repository import DatabasePromotionRepositoryStub
+from price_aggregator.main.repositories.promotion.redis_promotion_repository import RedisPromotionRepositoryStub
+from price_aggregator.main.repositories.promotion_repository import PromotionRepository
 
 class RepositoryFactory:
     @staticmethod

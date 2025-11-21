@@ -1,4 +1,9 @@
 # Price aggregator comparison app
+### Introduction
+
+The system architecture is designed to support the core objective of the Grocery Price Aggregator App: to collect, process, analyse, and present grocery price information from multiple South African retailers in an accurate and user-friendly way. The architecture embraces modularity, loose coupling, scalability, and future extensibility—ensuring that the solution can grow from a prototype into a production-ready ecosystem.
+
+The conceptual design follows standard architectural viewpoints: logical architecture, data architecture, component architecture, integration architecture, and deployment architecture.
 
 ### A pricing aggregator and comparison application that aims to consolidate information from major grocery stores, allowing users find the best deals on food and beverages in a central location.
 **Domain: Grocery stores**<br/>

@@ -1,6 +1,6 @@
-from pydantic import BaseModel, EmailStr
-from typing import List, Optional
-from src.main.product import Product  # Assuming you have a Product class
+from pydantic import BaseModel
+from typing import List
+from price_aggregator.main.models.product import Product  # Assuming you have a Product class
 
 class Retailer(BaseModel):
     """

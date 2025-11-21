@@ -2,7 +2,7 @@
 
 from abc import ABC, abstractmethod
 from typing import List, Optional
-from src.main.product import Product
+from price_aggregator.main.models.product import Product
 
 class ProductRepository(ABC):
     @abstractmethod

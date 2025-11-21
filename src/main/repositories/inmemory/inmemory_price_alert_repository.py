@@ -1,54 +1,32 @@
-# src/main/repositories/inmemory/inmemory_price_alert_repository.py
-from typing import Dict, Optional, List
-from src.main.price_alert import PriceAlert
-from src.main.price_alert import Price
-
-
-class InMemoryPriceRepository:
-    def __init__(self):
-        self.prices: Dict[str, Price] = {}
-
-    def add_price(self, price_data: dict) -> Price:
-        price = Price(**price_data)
-        self.prices[price.price_id] = price
-        return price
-
-    def get_price(self, price_id: str) -> Optional[Price]:
-        return self.prices.get(price_id)
-
-    def update_price(self, price_id: str, update_data: dict) -> Optional[Price]:
-        if price_id in self.prices:
-            for key, value in update_data.items():
-                setattr(self.prices[price_id], key, value)
-            return self.prices[price_id]
-        return None
-
-    def delete_price(self, price_id: str) -> bool:
-        if price_id in self.prices:
-            del self.prices[price_id]
-            return True
-        return False
-
-    def find_all(self) -> List[Price]:
-        return list(self.prices.values())
-
+from price_aggregator.main.models.price_alert import PriceAlert, Price  # Added Price import
+from typing import List, Optional
 
 class InMemoryPriceAlertRepository:
     def __init__(self):
-        self.alerts: Dict[str, PriceAlert] = {}
+        self.alerts = []
 
-    def save(self, alert: PriceAlert) -> PriceAlert:
-        self.alerts[alert.alert_id] = alert
-        return alert
+    def save(self, alert: PriceAlert) -> None:
+        self.alerts.append(alert)
 
     def find_by_id(self, alert_id: str) -> Optional[PriceAlert]:
-        return self.alerts.get(alert_id)
+        return next((alert for alert in self.alerts if alert.alert_id == alert_id), None)
 
     def find_all(self) -> List[PriceAlert]:
-        return list(self.alerts.values())
+        return self.alerts
 
     def delete(self, alert_id: str) -> bool:
-        if alert_id in self.alerts:
-            del self.alerts[alert_id]
+        alert = self.find_by_id(alert_id)
+        if alert:
+            self.alerts.remove(alert)
             return True
         return False
+
+class InMemoryPriceRepository:
+    def __init__(self):
+        self.prices = []
+
+    def save(self, price: Price) -> None:
+        self.prices.append(price)
+
+    def find_by_product_id(self, product_id: str) -> List[Price]:
+        return [price for price in self.prices if price.product_id == product_id]

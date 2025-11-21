@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "price-aggregator"
+version = "0.1.0"
+description = "A price aggregator and comparison system for grocery stores"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.104.0",
+    "pydantic>=2.0.0",
+    "redis>=5.0.0",
+    "uvicorn>=0.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["src/tests"]
+python_files = ["test_*.py"]
+addopts = "--cov=src --cov-report=html --cov-report=xml"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']

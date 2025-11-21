@@ -1,6 +1,7 @@
+# --- src/main/services/product_service.py ---
 from typing import Optional, List
-from src.main.repositories.inmemory.inmemory_product_repository import InMemoryProductRepository
-from src.main.product import Product  # Add this import
+from price_aggregator.main.repositories.inmemory.inmemory_product_repository import InMemoryProductRepository
+from price_aggregator.main.models.product import Product
 
 class ProductService:
     def __init__(self, repository: InMemoryProductRepository = None):
@@ -20,10 +21,8 @@ class ProductService:
         product = self.repository.find_by_id(product_id)
         if not product:
             return None
-
         for key, value in update_data.items():
             setattr(product, key, value)
-
         return self.repository.update(product)
 
     def delete_product(self, product_id: str) -> bool:
