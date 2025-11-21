@@ -1,4 +1,5 @@
-# Price aggregator comparison app
+# Price aggregator comparison app [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 
 ### A pricing aggregator and comparison application that aims to consolidate information from major grocery stores, allowing users find the best deals on food and beverages in a central location.
 
@@ -17,7 +18,15 @@
 
 ## **_Quick Links_**
 
-### 🧪 Language Choice & Key Design Decisions
+### # 🧪 How to Run Tests Locally
+➡️ [Click here](#-how-to-run-tests-locally) 
+
+### 🔄 CI/CD Pipeline Workflow
+➡️ [Click here](#-ci/cd-pipeline-workflow) 
+
+---
+
+### Language Choice & Key Design Decisions
 
 ➡️ [Click here](#-language-choice-python) 
 
@@ -27,6 +36,55 @@
 ### Repository Interface Design
 
 ➡️ [Click here](#-Justification-for-Repository-Design)
+
+---
+## Getting Started
+
+Follow the steps below to run the project locally:
+
+### 📦 Prerequisites
+- Python 3.10+
+- pip (Python package installer)
+
+### ⚙️ Setup Instructions
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/price-aggregator-app.git
+   cd price-aggregator-app
+   ```
+2. Create and Activate Virtual Environment
+   ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. Install Dependencies
+   ```bash
+    pip install -r requirements.txt
+   ```
+4. Run the Application
+   ```bash
+   uvicorn src.main:app --reload
+   ```
+5. Access the API
+   ```bash
+   Visit http://127.0.0.1:8000/docs for the Swagger UI documentation.
+   ```
+###  Features for Contribution
+
+| Feature                         | Description                                                       | Status       |
+|---------------------------------|-------------------------------------------------------------------|--------------|
+| **Product CRUD**                | Add, update, delete, and retrieve product information.            | ✅ Implemented |
+| **Price Comparison Engine**     | Compare product prices across stores.                             | ✅ Implemented |
+| **User Authentication**         | Register/login/logout functionality.                              | 🚧 In Progress |
+| **Wishlist/Saved List**         | Users can save products to track later.                           | ✅ Implemented |
+| **Notifications/Alerts**       | Price drop alerts and daily deal notifications.                   | ✅ Implemented |
+| **Retailer Profile Management** | Maintain and edit store and retailer info.                        | ✅ Implemented |
+| **Promotion & Discount Management** | Track and display active discounts from various retailers.     | ✅ Implemented |
+| **Review and Rating System**    | Users can leave reviews/ratings on products and stores.           | 🛠 Planned     |
+| **Store Geolocation Integration** | Find nearby stores with the best prices.                        | ✅ Implemented |
+| **Multi-source Data Ingestion** | Integrate more store APIs for better price data coverage.         | 🛠 Planned     |
+| **Mobile Responsiveness**       | Make UI mobile-friendly (for web apps).                           | 🛠 Planned     |
 
 ---
 
@@ -315,3 +373,44 @@ This ensures the application can scale when switching to a more permanent soluti
 ### 🧪 4. Simpler for testing
 
 * You can inject mock or test versions of repositories easily via the factory.
+
+----
+
+# 🧪 How to Run Tests Locally
+
+To run all unit tests locally using `pytest`, follow these steps:
+
+```bash
+# Step 1: Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate  # Use venv\Scripts\activate on Windows
+
+# Step 2: Install dependencies
+pip install -r requirements.txt
+
+# Step 3: Run tests
+pytest
+```
+
+# 🔄 CI/CD Pipeline Workflow
+
+This project uses GitHub Actions for Continuous Integration and Deployment.
+
+## CI/CD Steps
+
+### ✅ Every Push / PR:
+
+- Triggers `pytest` to run all tests.
+- Linting and formatting checks (e.g., `black`, `flake8`) are optional but recommended.
+
+### 🚫 On Pull Requests:
+
+- PRs are blocked from merging if any test fails.
+- GitHub will show a red ❌ and prevent merge until all checks pass ✅.
+
+### 📦 On Merge to `main`:
+
+- Artifacts (e.g., reports or build assets) are generated.
+- Optionally, deployment steps (e.g., Docker image build or pushing to a test server) can be triggered.
+
+---
